@@ -43,8 +43,18 @@ public class MainMenuGUI extends javax.swing.JPanel {
         });
 
         ProductMBtn.setText("Product Tracking");
+        ProductMBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProductMBtnActionPerformed(evt);
+            }
+        });
 
         SalesInvBtn.setText("Sales & Inventory");
+        SalesInvBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalesInvBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -75,8 +85,18 @@ public class MainMenuGUI extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AnimalMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalMBtnActionPerformed
-        // TODO add your handling code here:
+
+        
+        
     }//GEN-LAST:event_AnimalMBtnActionPerformed
+
+    private void ProductMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductMBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProductMBtnActionPerformed
+
+    private void SalesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesInvBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalesInvBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

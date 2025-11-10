@@ -66,11 +66,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Product Tracking"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProductMBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="SalesInvBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sales &amp; Inventory"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalesInvBtnActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
