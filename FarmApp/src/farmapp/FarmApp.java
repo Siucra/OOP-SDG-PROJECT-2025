@@ -5,16 +5,13 @@
 package farmapp;
 
 /**
- *
- * @author 05den
+ *FarmApp.java
+ * @author
  */
 public class FarmApp {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+     System.out.println("Hello world.");   
     }
     
 }
