@@ -29,21 +29,73 @@ public class MainMenuGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        mainMenutitle = new javax.swing.JLabel();
+        AnimalMBtn = new javax.swing.JButton();
+        productTBtn = new javax.swing.JButton();
+        salesInvBtn = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainMenutitle.setText("Main Menu");
+
+        AnimalMBtn.setText("Animal Management");
+        AnimalMBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnimalMBtnActionPerformed(evt);
+            }
+        });
+
+        productTBtn.setText("Product Tracking");
+
+        salesInvBtn.setText("Sales & Inventory");
+        salesInvBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salesInvBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(143, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(AnimalMBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(productTBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(salesInvBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mainMenutitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(137, 137, 137))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(mainMenutitle)
+                .addGap(37, 37, 37)
+                .addComponent(AnimalMBtn)
+                .addGap(34, 34, 34)
+                .addComponent(productTBtn)
+                .addGap(39, 39, 39)
+                .addComponent(salesInvBtn)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AnimalMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalMBtnActionPerformed
+        //redirects to a different interface
+        AnimalManagementGUI animalMGUI = new AnimalManagementGUI();
+        animalMGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_AnimalMBtnActionPerformed
+
+    private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
+        // celina ---
+    }//GEN-LAST:event_salesInvBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,5 +123,9 @@ public class MainMenuGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AnimalMBtn;
+    private javax.swing.JLabel mainMenutitle;
+    private javax.swing.JButton productTBtn;
+    private javax.swing.JButton salesInvBtn;
     // End of variables declaration//GEN-END:variables
 }
