@@ -1,14 +1,17 @@
+package farmapp;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package farmapp;
 
 /**
  *
  * @author 05den
  */
-public class MainMenuGUI extends javax.swing.JPanel {
+public class MainMenuGUI extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainMenuGUI.class.getName());
 
     /**
      * Creates new form MainMenuGUI
@@ -26,83 +29,47 @@ public class MainMenuGUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        AnimalMBtn = new javax.swing.JButton();
-        ProductMBtn = new javax.swing.JButton();
-        SalesInvBtn = new javax.swing.JButton();
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Main Menu");
-
-        AnimalMBtn.setText("Animal Management");
-        AnimalMBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnimalMBtnActionPerformed(evt);
-            }
-        });
-
-        ProductMBtn.setText("Product Tracking");
-        ProductMBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProductMBtnActionPerformed(evt);
-            }
-        });
-
-        SalesInvBtn.setText("Sales & Inventory");
-        SalesInvBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalesInvBtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AnimalMBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductMBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SalesInvBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(128, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(AnimalMBtn)
-                .addGap(48, 48, 48)
-                .addComponent(ProductMBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(SalesInvBtn)
-                .addGap(38, 38, 38))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AnimalMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalMBtnActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-        
-        
-    }//GEN-LAST:event_AnimalMBtnActionPerformed
-
-    private void ProductMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductMBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProductMBtnActionPerformed
-
-    private void SalesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesInvBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SalesInvBtnActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new MainMenuGUI().setVisible(true));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AnimalMBtn;
-    private javax.swing.JButton ProductMBtn;
-    private javax.swing.JButton SalesInvBtn;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
