@@ -28,21 +28,103 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        mainMenutitle = new javax.swing.JLabel();
+        viewAnimalsBtn = new javax.swing.JButton();
+        addAnimalBtn = new javax.swing.JButton();
+        searchAnimalBtn = new javax.swing.JButton();
+        removeAnimalBtn = new javax.swing.JButton();
+        backAmBtn = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainMenutitle.setText("Animal Management");
+
+        viewAnimalsBtn.setText("View all Animals");
+        viewAnimalsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewAnimalsBtnActionPerformed(evt);
+            }
+        });
+
+        addAnimalBtn.setText("Add");
+
+        searchAnimalBtn.setText("Search");
+        searchAnimalBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchAnimalBtnActionPerformed(evt);
+            }
+        });
+
+        removeAnimalBtn.setText("Remove");
+
+        backAmBtn.setText("Back");
+        backAmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backAmBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(mainMenutitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backAmBtn)
+                        .addGap(81, 81, 81)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(searchAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(viewAnimalsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(addAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(removeAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(mainMenutitle)
+                .addGap(32, 32, 32)
+                .addComponent(viewAnimalsBtn)
+                .addGap(29, 29, 29)
+                .addComponent(searchAnimalBtn)
+                .addGap(34, 34, 34)
+                .addComponent(addAnimalBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(removeAnimalBtn)
+                .addGap(24, 24, 24))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(backAmBtn)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
+        //redirects to a different interface
+        AnimalManagementGUI animalMGUI = new AnimalManagementGUI();
+        animalMGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_viewAnimalsBtnActionPerformed
+
+    private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
+        // celina ---
+    }//GEN-LAST:event_searchAnimalBtnActionPerformed
+
+    private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
+        MainMenuGUI mainGUI = new MainMenuGUI();
+        mainGUI.setVisible(true);
+	this.dispose();
+    }//GEN-LAST:event_backAmBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +152,11 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addAnimalBtn;
+    private javax.swing.JButton backAmBtn;
+    private javax.swing.JLabel mainMenutitle;
+    private javax.swing.JButton removeAnimalBtn;
+    private javax.swing.JButton searchAnimalBtn;
+    private javax.swing.JButton viewAnimalsBtn;
     // End of variables declaration//GEN-END:variables
 }
