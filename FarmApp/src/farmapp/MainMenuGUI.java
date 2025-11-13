@@ -48,6 +48,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
         });
 
         productTBtn.setText("Product Tracking");
+        productTBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productTBtnActionPerformed(evt);
+            }
+        });
 
         salesInvBtn.setText("Sales & Inventory");
         salesInvBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +101,12 @@ public class MainMenuGUI extends javax.swing.JFrame {
     private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
         // celina ---
     }//GEN-LAST:event_salesInvBtnActionPerformed
+
+    private void productTBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTBtnActionPerformed
+         ProductManagementGUI productMGUI = new ProductManagementGUI();
+        productMGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_productTBtnActionPerformed
 
     /**
      * @param args the command line arguments
