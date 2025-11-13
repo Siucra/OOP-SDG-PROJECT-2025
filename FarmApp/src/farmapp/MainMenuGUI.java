@@ -92,14 +92,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AnimalMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalMBtnActionPerformed
-        //redirects to a different interface
-        AnimalManagementGUI animalMGUI = new AnimalManagementGUI();
-        animalMGUI.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_AnimalMBtnActionPerformed
 
     private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
-        // celina ---
+        
     }//GEN-LAST:event_salesInvBtnActionPerformed
 
     private void productTBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTBtnActionPerformed
