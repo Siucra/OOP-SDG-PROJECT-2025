@@ -46,6 +46,9 @@
                       </Group>
                   </Group>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -59,11 +62,14 @@
               <Component id="alertBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="158" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
           </Group>
@@ -83,6 +89,9 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="viewProductsBtn" min="-2" pref="31" max="-2" attributes="0"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

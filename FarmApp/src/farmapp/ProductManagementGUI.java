@@ -40,6 +40,9 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         productManagement_label = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -99,6 +102,13 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -135,6 +145,9 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addComponent(alertBtn)
                 .addGap(14, 14, 14))
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -153,6 +166,9 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(viewProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
