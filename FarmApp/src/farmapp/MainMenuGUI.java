@@ -95,7 +95,9 @@ public class MainMenuGUI extends javax.swing.JPanel {
     }//GEN-LAST:event_ProductMBtnActionPerformed
 
     private void SalesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesInvBtnActionPerformed
-        // TODO add your handling code here:
+        SalesAndInventoryGUI salesGUI = new SalesAndInventoryGUI();
+        salesGUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_SalesInvBtnActionPerformed
 
 
