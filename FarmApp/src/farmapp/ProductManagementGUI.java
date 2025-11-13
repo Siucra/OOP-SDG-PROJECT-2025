@@ -79,6 +79,11 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         productManagement_label.setText("Product Management");
 
         BackBtn.setText("Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,6 +156,13 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     private void checkExpiryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkExpiryBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkExpiryBtnActionPerformed
+
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        
+        MainMenuGUI mainGUI = new MainMenuGUI();
+        mainGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BackBtnActionPerformed
 
     /**
      * @param args the command line arguments
