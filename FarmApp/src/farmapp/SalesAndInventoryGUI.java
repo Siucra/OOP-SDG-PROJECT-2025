@@ -28,21 +28,121 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        mainMenutitle = new javax.swing.JLabel();
+        SalesBtn = new javax.swing.JButton();
+        InventoryBtn = new javax.swing.JButton();
+        ReportBtn = new javax.swing.JButton();
+        BackBtn = new javax.swing.JButton();
+        LogCombo = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainMenutitle.setText("Sales & Inventory");
+
+        SalesBtn.setText("View Sales");
+        SalesBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalesBtnActionPerformed(evt);
+            }
+        });
+
+        InventoryBtn.setText("View Inventory");
+        InventoryBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InventoryBtnActionPerformed(evt);
+            }
+        });
+
+        ReportBtn.setText("Create Report");
+        ReportBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReportBtnActionPerformed(evt);
+            }
+        });
+
+        BackBtn.setText("Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
+
+        LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        LogCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogComboActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BackBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ReportBtn)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 108, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(SalesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mainMenutitle)
+                            .addComponent(InventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(111, 111, 111))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(172, 172, 172))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(mainMenutitle)
+                .addGap(34, 34, 34)
+                .addComponent(SalesBtn)
+                .addGap(27, 27, 27)
+                .addComponent(InventoryBtn)
+                .addGap(27, 27, 27)
+                .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ReportBtn)
+                    .addComponent(BackBtn))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SalesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesBtnActionPerformed
+        //redirects to a different interface
+
+    }//GEN-LAST:event_SalesBtnActionPerformed
+
+    private void InventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryBtnActionPerformed
+
+    }//GEN-LAST:event_InventoryBtnActionPerformed
+
+    private void ReportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportBtnActionPerformed
+        
+    }//GEN-LAST:event_ReportBtnActionPerformed
+
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        MainMenuGUI mainGUI = new MainMenuGUI();
+        mainGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BackBtnActionPerformed
+
+    private void LogComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LogComboActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +170,11 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
+    private javax.swing.JButton InventoryBtn;
+    private javax.swing.JComboBox<String> LogCombo;
+    private javax.swing.JButton ReportBtn;
+    private javax.swing.JButton SalesBtn;
+    private javax.swing.JLabel mainMenutitle;
     // End of variables declaration//GEN-END:variables
 }
