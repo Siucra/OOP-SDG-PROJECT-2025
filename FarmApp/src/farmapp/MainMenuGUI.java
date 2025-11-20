@@ -56,6 +56,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
         productTBtn.setBackground(new java.awt.Color(254, 220, 159));
         productTBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         productTBtn.setText("Product Tracking");
+        productTBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productTBtnActionPerformed(evt);
+            }
+        });
 
         salesInvBtn.setBackground(new java.awt.Color(254, 220, 159));
         salesInvBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -104,8 +109,16 @@ public class MainMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_AnimalMBtnActionPerformed
 
     private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
-        // celina ---
+        SalesAndInventoryGUI salesGUI = new SalesAndInventoryGUI();
+        salesGUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_salesInvBtnActionPerformed
+
+    private void productTBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTBtnActionPerformed
+         ProductManagementGUI productMGUI = new ProductManagementGUI();
+        productMGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_productTBtnActionPerformed
 
     /**
      * @param args the command line arguments

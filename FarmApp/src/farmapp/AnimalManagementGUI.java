@@ -116,11 +116,11 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
-        //redirects to a different interface
+
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
-        // celina ---
+       
     }//GEN-LAST:event_searchAnimalBtnActionPerformed
 
     private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
