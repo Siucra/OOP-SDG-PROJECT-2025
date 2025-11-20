@@ -43,10 +43,12 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         setForeground(new java.awt.Color(153, 255, 153));
 
         mainMenutitle.setBackground(new java.awt.Color(255, 255, 255));
-        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenutitle.setText("Animal Management");
 
+        viewAnimalsBtn.setBackground(new java.awt.Color(254, 220, 159));
+        viewAnimalsBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         viewAnimalsBtn.setText("View all Animals");
         viewAnimalsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,8 +56,12 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        addAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
+        addAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         addAnimalBtn.setText("Add");
 
+        searchAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
+        searchAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         searchAnimalBtn.setText("Search");
         searchAnimalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +69,8 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        removeAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
+        removeAnimalBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         removeAnimalBtn.setText("Remove");
 
         backAmBtn.setText("Back");
@@ -90,7 +98,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
                             .addComponent(viewAnimalsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(addAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(removeAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +111,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
                 .addComponent(searchAnimalBtn)
                 .addGap(34, 34, 34)
                 .addComponent(addAnimalBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(removeAnimalBtn)
                 .addGap(24, 24, 24))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
