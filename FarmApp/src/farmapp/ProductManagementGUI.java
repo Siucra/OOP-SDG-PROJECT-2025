@@ -42,13 +42,14 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 255, 153));
         setForeground(new java.awt.Color(153, 255, 153));
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.setBackground(new java.awt.Color(251, 187, 105));
 
-        productManagement_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        productManagement_label.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         productManagement_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productManagement_label.setText("Product Management");
 
-        viewProductsBtn.setBackground(new java.awt.Color(204, 255, 204));
+        viewProductsBtn.setBackground(new java.awt.Color(254, 220, 159));
+        viewProductsBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         viewProductsBtn.setText("View Products");
         viewProductsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +71,8 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        checkExpiryBtn.setBackground(new java.awt.Color(254, 220, 159));
+        checkExpiryBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         checkExpiryBtn.setText("Check Expiry");
         checkExpiryBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +80,8 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        BackBtn.setBackground(new java.awt.Color(254, 220, 159));
+        BackBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         BackBtn.setText("Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +89,8 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        alertBtn.setBackground(new java.awt.Color(254, 220, 159));
+        alertBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         alertBtn.setText("Alert");
         alertBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,25 +109,24 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addComponent(alertBtn)
                 .addGap(26, 26, 26))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(productInventoryBtn)
-                            .addComponent(viewProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(productManagement_label, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addComponent(productManagement_label)
+                .addContainerGap(80, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(updateProductBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(productInventoryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(viewProductsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(checkExpiryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(131, 131, 131))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(productManagement_label, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(viewProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(productInventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)

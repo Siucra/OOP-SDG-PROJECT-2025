@@ -38,7 +38,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
         salesInvBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(153, 255, 153));
+        setBackground(new java.awt.Color(251, 187, 105));
 
         mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
