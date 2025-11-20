@@ -4,6 +4,8 @@
  */
 package farmapp;
 
+import java.awt.Color;
+
 /**
  *
  * @author 05den
@@ -16,6 +18,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
      * Creates new form AnimalManagementGUI
      */
     public AnimalManagementGUI() {
+        this.getContentPane().setBackground(new Color(255,204,153));
         initComponents();
     }
 
@@ -36,7 +39,10 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         backAmBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 153));
+        setForeground(new java.awt.Color(153, 255, 153));
 
+        mainMenutitle.setBackground(new java.awt.Color(255, 255, 255));
         mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenutitle.setText("Animal Management");

@@ -1,5 +1,7 @@
 package farmapp;
 
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,6 +19,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
      * Creates new form MainMenuGUI
      */
     public MainMenuGUI() {
+        this.getContentPane().setBackground(new Color(251,187,105));
         initComponents();
     }
 
@@ -35,11 +38,14 @@ public class MainMenuGUI extends javax.swing.JFrame {
         salesInvBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 153));
 
-        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenutitle.setText("Main Menu");
 
+        AnimalMBtn.setBackground(new java.awt.Color(254, 220, 159));
+        AnimalMBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         AnimalMBtn.setText("Animal Management");
         AnimalMBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +53,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
             }
         });
 
+        productTBtn.setBackground(new java.awt.Color(254, 220, 159));
+        productTBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         productTBtn.setText("Product Tracking");
         productTBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +62,8 @@ public class MainMenuGUI extends javax.swing.JFrame {
             }
         });
 
+        salesInvBtn.setBackground(new java.awt.Color(254, 220, 159));
+        salesInvBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         salesInvBtn.setText("Sales & Inventory");
         salesInvBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,19 +75,19 @@ public class MainMenuGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(105, 105, 105)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(AnimalMBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(productTBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(salesInvBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(mainMenutitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(137, 137, 137))
+                    .addComponent(mainMenutitle))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(32, 32, 32)
                 .addComponent(mainMenutitle)
                 .addGap(37, 37, 37)
                 .addComponent(AnimalMBtn)
@@ -85,7 +95,7 @@ public class MainMenuGUI extends javax.swing.JFrame {
                 .addComponent(productTBtn)
                 .addGap(39, 39, 39)
                 .addComponent(salesInvBtn)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
