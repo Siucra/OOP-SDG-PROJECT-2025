@@ -42,7 +42,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="cc" red="ff" type="rgb"/>
+          <Color blue="69" green="bb" red="fb" type="rgb"/>
         </Property>
       </Properties>
 
@@ -50,7 +50,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="BackBtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="alertBtn" min="-2" max="-2" attributes="0"/>
@@ -59,20 +59,20 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="updateProductBtn" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="checkExpiryBtn" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="productInventoryBtn" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="viewProductsBtn" alignment="1" min="-2" pref="123" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="productInventoryBtn" alignment="1" max="32767" attributes="0"/>
+                              <Component id="viewProductsBtn" alignment="1" max="32767" attributes="0"/>
+                              <Component id="updateProductBtn" alignment="1" max="32767" attributes="0"/>
+                              <Component id="checkExpiryBtn" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="productManagement_label" min="-2" pref="158" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="productManagement_label" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="142" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -81,9 +81,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="productManagement_label" min="-2" pref="32" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="viewProductsBtn" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="viewProductsBtn" min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="productInventoryBtn" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="updateProductBtn" min="-2" pref="31" max="-2" attributes="0"/>
@@ -103,7 +103,7 @@
         <Component class="javax.swing.JLabel" name="productManagement_label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="1"/>
+              <Font name="Monospaced" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Product Management"/>
@@ -112,7 +112,10 @@
         <Component class="javax.swing.JButton" name="viewProductsBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="View Products"/>
           </Properties>
@@ -122,6 +125,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="productInventoryBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Product Inventory"/>
           </Properties>
           <Events>
@@ -130,6 +139,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="updateProductBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Update Product"/>
           </Properties>
           <Events>
@@ -138,6 +153,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="checkExpiryBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Check Expiry"/>
           </Properties>
           <Events>
@@ -146,6 +167,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="BackBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
           <Events>
@@ -154,6 +181,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="alertBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9f" green="dc" red="fe" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Alert"/>
           </Properties>
           <Events>
