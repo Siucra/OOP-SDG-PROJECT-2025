@@ -18,7 +18,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
      * Creates new form AnimalManagementGUI
      */
     public AnimalManagementGUI() {
-        this.getContentPane().setBackground(new Color(255,204,153));
+        this.getContentPane().setBackground(new Color(251,187,105));
         initComponents();
     }
 
@@ -70,7 +70,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         });
 
         removeAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
-        removeAnimalBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        removeAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         removeAnimalBtn.setText("Remove");
 
         backAmBtn.setText("Back");
@@ -85,20 +85,20 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(backAmBtn)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(mainMenutitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backAmBtn)
-                        .addGap(81, 81, 81)
+                        .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(searchAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(viewAnimalsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(addAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(removeAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(109, Short.MAX_VALUE))
+                            .addComponent(removeAnimalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,7 +111,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
                 .addComponent(searchAnimalBtn)
                 .addGap(34, 34, 34)
                 .addComponent(addAnimalBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(removeAnimalBtn)
                 .addGap(24, 24, 24))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()

@@ -109,15 +109,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_AnimalMBtnActionPerformed
 
     private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
-        SalesAndInventoryGUI salesGUI = new SalesAndInventoryGUI();
-        salesGUI.setVisible(true);
-        this.dispose();
+ 
     }//GEN-LAST:event_salesInvBtnActionPerformed
 
     private void productTBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTBtnActionPerformed
-         ProductManagementGUI productMGUI = new ProductManagementGUI();
-        productMGUI.setVisible(true);
-        this.dispose();
+ 
     }//GEN-LAST:event_productTBtnActionPerformed
 
     /**
