@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package farmapp;
 
 /**
@@ -79,8 +76,8 @@ public class Animal {//PARENT CLASS
         this.weight = weight;
     }
     
-    
-    
-    
+    public String printDetails(){
+        return "ID: "+id +"\nGender: "+gender +"\nAge: "+age +"\nIs Alive: "+isAlive +"\nWeight" +weight +"\nIs Healthy"+isHealthy;
+    }
     
 }

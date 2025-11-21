@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * @author 05den
  */
 public class MainMenuGUI extends javax.swing.JFrame {
-    private ArrayList<Animal> animals = new ArrayList<>();
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainMenuGUI.class.getName());
 
