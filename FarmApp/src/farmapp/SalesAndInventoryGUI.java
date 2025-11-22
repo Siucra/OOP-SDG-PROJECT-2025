@@ -16,6 +16,7 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
      * Creates new form SalesAndInventoryGUI
      */
     public SalesAndInventoryGUI() {
+        this.getContentPane().setBackground(new Color(251,187,105));
         initComponents();
     }
 
@@ -37,17 +38,29 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mainMenutitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        mainMenutitle.setForeground(new java.awt.Color(204, 204, 204));
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenutitle.setText("Sales & Inventory");
 
+        SalesBtn.setBackground(new java.awt.Color(254, 220, 159));
+        SalesBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        SalesBtn.setForeground(new java.awt.Color(204, 204, 204));
         SalesBtn.setText("View Sales");
         SalesBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalesBtnActionPerformed(evt);
             }
         });
+        SalesBtn.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                SalesBtnPropertyChange(evt);
+            }
+        });
 
+        InventoryBtn.setBackground(new java.awt.Color(254, 220, 159));
+        InventoryBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        InventoryBtn.setForeground(new java.awt.Color(204, 204, 204));
         InventoryBtn.setText("View Inventory");
         InventoryBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +68,9 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
             }
         });
 
+        ReportBtn.setBackground(new java.awt.Color(254, 220, 159));
+        ReportBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        ReportBtn.setForeground(new java.awt.Color(204, 204, 204));
         ReportBtn.setText("Create Report");
         ReportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +78,9 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
             }
         });
 
+        BackBtn.setBackground(new java.awt.Color(254, 220, 159));
+        BackBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        BackBtn.setForeground(new java.awt.Color(204, 204, 204));
         BackBtn.setText("Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +88,9 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
             }
         });
 
+        LogCombo.setBackground(new java.awt.Color(254, 220, 159));
+        LogCombo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        LogCombo.setForeground(new java.awt.Color(204, 204, 204));
         LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         LogCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,29 +111,33 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
                         .addComponent(ReportBtn)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 108, Short.MAX_VALUE)
+                        .addGap(0, 53, Short.MAX_VALUE)
+                        .addComponent(mainMenutitle)
+                        .addGap(58, 58, 58))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(SalesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(mainMenutitle)
-                            .addComponent(InventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(111, 111, 111))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(172, 172, 172))
+                            .addComponent(InventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SalesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(35, 35, 35)
                 .addComponent(mainMenutitle)
                 .addGap(34, 34, 34)
                 .addComponent(SalesBtn)
-                .addGap(27, 27, 27)
+                .addGap(28, 28, 28)
                 .addComponent(InventoryBtn)
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ReportBtn)
                     .addComponent(BackBtn))
@@ -143,6 +169,10 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     private void LogComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LogComboActionPerformed
+
+    private void SalesBtnPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_SalesBtnPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalesBtnPropertyChange
 
     /**
      * @param args the command line arguments
