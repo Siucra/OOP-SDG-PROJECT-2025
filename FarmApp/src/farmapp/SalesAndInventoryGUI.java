@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package farmapp;
+import java.awt.Color;
+
 
 /**
  *
@@ -39,13 +41,11 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
-        mainMenutitle.setForeground(new java.awt.Color(204, 204, 204));
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenutitle.setText("Sales & Inventory");
 
         SalesBtn.setBackground(new java.awt.Color(254, 220, 159));
         SalesBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        SalesBtn.setForeground(new java.awt.Color(204, 204, 204));
         SalesBtn.setText("View Sales");
         SalesBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,6 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         InventoryBtn.setBackground(new java.awt.Color(254, 220, 159));
         InventoryBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        InventoryBtn.setForeground(new java.awt.Color(204, 204, 204));
         InventoryBtn.setText("View Inventory");
         InventoryBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +69,6 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         ReportBtn.setBackground(new java.awt.Color(254, 220, 159));
         ReportBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        ReportBtn.setForeground(new java.awt.Color(204, 204, 204));
         ReportBtn.setText("Create Report");
         ReportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +78,6 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         BackBtn.setBackground(new java.awt.Color(254, 220, 159));
         BackBtn.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        BackBtn.setForeground(new java.awt.Color(204, 204, 204));
         BackBtn.setText("Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +87,6 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         LogCombo.setBackground(new java.awt.Color(254, 220, 159));
         LogCombo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        LogCombo.setForeground(new java.awt.Color(204, 204, 204));
         LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         LogCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
