@@ -59,6 +59,11 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         addAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
         addAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         addAnimalBtn.setText("Add");
+        addAnimalBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAnimalBtnActionPerformed(evt);
+            }
+        });
 
         searchAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
         searchAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -72,6 +77,11 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         removeAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
         removeAnimalBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         removeAnimalBtn.setText("Remove");
+        removeAnimalBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeAnimalBtnActionPerformed(evt);
+            }
+        });
 
         backAmBtn.setText("Back");
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +144,14 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
+       //String or int as ID? **********************************
+        String search = JOptionPane.showInputDialog(this,"Enter the ID of the animal you want to search for: ");
+        if(search==null){
+            JOptionPane.showMessageDialog(this,"Invalid ID. Please try again.");
+        }
+        for (Animal a : animals) {
+            JOptionPane.showMessageDialog(this, a.printDetails());
+        }
        
     }//GEN-LAST:event_searchAnimalBtnActionPerformed
 
@@ -142,6 +160,16 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
         mainGUI.setVisible(true);
 	this.dispose();
     }//GEN-LAST:event_backAmBtnActionPerformed
+
+    private void addAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBtnActionPerformed
+        
+    //Animal a = new Animal();
+        
+    }//GEN-LAST:event_addAnimalBtnActionPerformed
+
+    private void removeAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAnimalBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeAnimalBtnActionPerformed
 
     /**
      * @param args the command line arguments

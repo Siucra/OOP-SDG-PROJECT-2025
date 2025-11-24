@@ -3,15 +3,12 @@ package farmapp;
 import java.awt.Color;
 import java.util.ArrayList;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+/**
+ *FarmApp.java
+ * @author Denise Balasmeh, Celina Moali, Safiat dao
+ *  x24701351, x23160306, x23477232  
  */
 
-/**
- *
- * @author 05den
- */
 public class MainMenuGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainMenuGUI.class.getName());
