@@ -1,16 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package farmapp;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author 05den
  */
 public class AnimalManagementGUI extends javax.swing.JFrame {
+        private ArrayList<Animal> animals = new ArrayList<>();
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AnimalManagementGUI.class.getName());
 
@@ -124,7 +124,13 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
+        if (animals.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "There are no animals stored");
+        }
+        for (Animal a : animals) {
 
+            JOptionPane.showMessageDialog(this, a.printDetails());
+        }
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
