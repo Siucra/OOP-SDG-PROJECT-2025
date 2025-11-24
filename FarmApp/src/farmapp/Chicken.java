@@ -3,7 +3,7 @@ package farmapp;
 /**
  * @author Denise Balasmeh
  * 24701351
- * Cow.java
+ * Chicken.java
  */
 
 public class Chicken extends Animal{
