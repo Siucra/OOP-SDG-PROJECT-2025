@@ -144,13 +144,21 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
-       //String or int as ID? **********************************
-        String search = JOptionPane.showInputDialog(this,"Enter the ID of the animal you want to search for: ");
-        if(search==null){
-            JOptionPane.showMessageDialog(this,"Invalid ID. Please try again.");
-        }
-        for (Animal a : animals) {
-            JOptionPane.showMessageDialog(this, a.printDetails());
+         if (animals.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "There are no animals.");
+        } else {
+            int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
+            boolean isFound = false;
+            for (int i = 0; i < animals.size(); i++) {
+                if (animals.get(i).getId() == search) {
+                    JOptionPane.showMessageDialog(this, animals.get(i).printDetails());
+                    isFound = true;
+                    break;
+                }
+            }
+            if (!isFound) {
+                JOptionPane.showMessageDialog(this, "Animal not found.");
+            }
         }
        
     }//GEN-LAST:event_searchAnimalBtnActionPerformed
