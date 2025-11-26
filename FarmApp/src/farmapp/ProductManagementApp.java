@@ -17,19 +17,19 @@ public class ProductManagementApp {
         // TODO code application logic here
         ProductManagementGUI myGUI = new ProductManagementGUI();
         myGUI.setVisible(true);
-    }
+    
       //Cow
        // public String printDetails(){
         // return product_name+","+unit+","+expiry_date+ "," + prod_quantity;
-        Cow c = new Cow ("Cow Milk", "20 litres", "27/12/2025" );
-        
+        Cow c = new Cow ("yes", "20 litres", "Yes", "10" );
+        System.out.println(c.printDetails());
        //Chicken
-        Chicken ch = new Chicken("");
-    
+        Chicken ch = new Chicken("Eggs","10", "1/3/2025", "20");
+        System.out.println(ch.printDetails());
        //Lamb
-        Lamb la = new Lamb ();
-    
+        Lamb la = new Lamb ("Lamb Meat", "18kg", "20/1/2025", "50");
+        System.out.println(la.printDetails());
        
- 
+    }
     
 }
