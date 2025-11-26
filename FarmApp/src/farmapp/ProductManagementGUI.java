@@ -221,17 +221,20 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed
         // TODO add your handling code here:
-        String idTf = parseInt(updateProductTf.getText());
+        String idTf = updateProductTf.getText();
         
         if(idTf.isEmpty()){
-                JOptionPane.showInputDialog(null, "Enter a product Id");
+                JOptionPane.showInputDialog(null, "No products available");
                 return;
             }
         
-            
+           int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
+            boolean Found = false;
         
-        for(ProductManagement p : aList){
-            if(p.getProd_id() == idTf){
+        for (int i = 0; i < aList.size(); i++) {
+        ProductManagement p = aList.get(i);
+}{
+            if(p.getProd_id() == idEntered){
                 
            
                 
@@ -251,8 +254,20 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Product Id not found");
                  return;
           }
+            
+          /*  if (animals.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "There are no animals.");
+        } else {
+            int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
+            boolean isFound = false;
+            for (int i = 0; i < animals.size(); i++) {
+                if (animals.get(i).getId() == search) {
+                    JOptionPane.showMessageDialog(this, animals.get(i).printDetails());
+                    isFound = true;
+                    break;
+                }
   
-        
+        */
         
     }//GEN-LAST:event_updateProductBtnActionPerformed
 
