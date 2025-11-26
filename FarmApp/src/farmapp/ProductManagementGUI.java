@@ -131,7 +131,6 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
-        updateProductTf.setText("sheep");
         updateProductTf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateProductTfActionPerformed(evt);
@@ -211,10 +210,12 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         if(aList.isEmpty()){
             JOptionPane.showMessageDialog(null, "No products available");
         }
-        for(ProductManagement p : aList){
-            output += p.printDetails();
+        //For loop, iterates through the list of products
+        for (int i = 0; i < aList.size(); i++) {
+            ProductManagement p = aList.get(i);
+            output += p.printDetails() + "\n"; ;
         }
-        JOptionPane.showMessageDialog(null, "These are all the products");
+        JOptionPane.showMessageDialog(null, output);
     }//GEN-LAST:event_viewProductsBtnActionPerformed
     
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed
@@ -224,7 +225,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         
         //If the user left the text field empty, the message shows
         if(idTf.isEmpty()){
-                JOptionPane.showInputDialog(null, "Enter an Id: ");
+                JOptionPane.showMessageDialog(null, "Enter an Id: ");
                 return;
         }
         
@@ -241,14 +242,14 @@ public class ProductManagementGUI extends javax.swing.JFrame {
            
                 
          // This asks the user to enter a name, expiry date, qunatity
-        String newName = JOptionPane.showInputDialog(null, "Enter a Name: ", p.getProd_name());
+        // String newName = JOptionPane.showInputDialog(null, "Enter a Name: ", p.getProd_name());
       
         String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " , p.getExpiry_date());
         
         Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
         
         // Updated the values of the newName, newExpiry, newQuantity to the product
-            p.setProd_name(newName);
+            // p.setProd_name(newName);
             p.setExpiry_date(newExpiry_Date);
             p.setProd_quantity(newQuantity);
            
