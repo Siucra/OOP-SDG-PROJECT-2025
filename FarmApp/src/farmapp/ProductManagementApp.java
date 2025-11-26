@@ -4,6 +4,8 @@
  */
 package farmapp;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author safia
@@ -18,7 +20,10 @@ public class ProductManagementApp {
         ProductManagementGUI myGUI = new ProductManagementGUI();
         myGUI.setVisible(true);
     
-      //Cow
+       
+    
+       /*
+        //Cow
        // public String printDetails(){
         // return product_name+","+unit+","+expiry_date+ "," + prod_quantity;
         Cow c = new Cow ("yes", "20 litres", "Yes", "10" );
@@ -31,5 +36,6 @@ public class ProductManagementApp {
         System.out.println(la.printDetails());
        
     }
-    
+    */
+}
 }

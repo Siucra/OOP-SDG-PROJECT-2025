@@ -1,5 +1,8 @@
 package farmapp;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -15,9 +18,26 @@ public class ProductManagementGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form ProductManagementGUI
-     */
+     */ 
+    private ArrayList<ProductManagement> aList;
+    private String name;
+    private String expiry_date;
+    private int id;
+    private int quantity;
+    private int count;
+     // Contstructor
     public ProductManagementGUI() {
         initComponents();
+        
+        //Create our Array List
+        aList = new ArrayList<ProductManagement>();   //NO need to put Assessment in Angle brackets <>
+        // initialise our variables
+        name = "";
+        expiry_date = "";
+        quantity = 0;
+        id = 0;
+        count = 0;
+    
     }
 
     /**
@@ -158,10 +178,17 @@ public class ProductManagementGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    String output = "";
     private void viewProductsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsBtnActionPerformed
         // TODO add your handling code here:
-        
+        if(aList.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No products available");
+        }
+        for (ProductManagement p : aList){
+            output += p.printDetails();
+        }
+        JOptionPane.showMessageDialog(null, "These are all the products");
     }//GEN-LAST:event_viewProductsBtnActionPerformed
 
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed

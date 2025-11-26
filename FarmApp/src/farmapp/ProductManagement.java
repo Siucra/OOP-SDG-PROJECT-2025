@@ -10,32 +10,32 @@ package farmapp;
  */
 public class ProductManagement {
     
-    private String product_name;
-    private String unit;
+    private int prod_id;
+    private String prod_name;
     private String expiry_date;
     private double prod_quantity;
     
-    public ProductManagement(String product_name,String unit, String expiry_date,double prod_quantity){
-        this.product_name = product_name;
-        this.unit = unit;
+    public ProductManagement(int prod_id, String prod_name, String expiry_date,double prod_quantity){
+        this.prod_name = prod_name;
+        this.prod_id = prod_id;
         this.expiry_date = expiry_date;
         this.prod_quantity = prod_quantity;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    public int getProd_id() {
+        return prod_id;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProd_id(int prod_id) {
+        this.prod_id = prod_id;
     }
 
-    public String getUnit() {
-        return unit;
+    public String getProd_name() {
+        return prod_name;
     }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
+    public void setProd_name(String prod_name) {
+        this.prod_name = prod_name;
     }
 
     public String getExpiry_date() {
@@ -53,9 +53,10 @@ public class ProductManagement {
     public void setProd_quantity(double prod_quantity) {
         this.prod_quantity = prod_quantity;
     }
+
     
     
     public String printDetails(){
-        return product_name+","+unit+","+expiry_date+ "," + prod_quantity;
+        return prod_id+","+prod_name+","+expiry_date+ "," + prod_quantity;
     }
 }
