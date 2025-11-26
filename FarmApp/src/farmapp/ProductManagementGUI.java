@@ -131,6 +131,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        updateProductTf.setText("sheep");
         updateProductTf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateProductTfActionPerformed(evt);
@@ -218,31 +219,35 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed
         // TODO add your handling code here:
+        // This read id inputted by the user
         String idTf = updateProductTf.getText();
         
+        //If the user left the text field empty, the message shows
         if(idTf.isEmpty()){
                 JOptionPane.showInputDialog(null, "Enter an Id: ");
                 return;
         }
         
            int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
-           boolean Found = false;
+           boolean Found = false; //check if the product is found, if found it will return true
         
+        //For loop, iterates through the list of products
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
-
+            
+            // This checks if the id enetred by the uer matches the product id
             if(p.getProd_id() == idEntered){
                 
            
                 
-         // Asked the user to eneter values
-        String newName = JOptionPane.showInputDialog(null, "Enter a Name: " + p.getProd_name());
+         // This asks the user to enter a name, expiry date, qunatity
+        String newName = JOptionPane.showInputDialog(null, "Enter a Name: ", p.getProd_name());
       
-        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " + p.getExpiry_date());
+        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " , p.getExpiry_date());
         
         Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
         
-        // Updated the values of the newName, newExpiry, newQuantity
+        // Updated the values of the newName, newExpiry, newQuantity to the product
             p.setProd_name(newName);
             p.setExpiry_date(newExpiry_Date);
             p.setProd_quantity(newQuantity);
@@ -256,19 +261,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         
         if(!Found){
             JOptionPane.showMessageDialog(null, "Product id cannot be found");
-          /*  if (animals.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "There are no animals.");
-        } else {
-            int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
-            boolean isFound = false;
-            for (int i = 0; i < animals.size(); i++) {
-                if (animals.get(i).getId() == search) {
-                    JOptionPane.showMessageDialog(this, animals.get(i).printDetails());
-                    isFound = true;
-                    break;
-                }
-  
-        */
+       
         }
     }//GEN-LAST:event_updateProductBtnActionPerformed
 
