@@ -15,6 +15,21 @@ public class ProductManagementApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ProductManagementGUI myGUI = new ProductManagementGUI();
+        myGUI.setVisible(true);
     }
+      //Cow
+       // public String printDetails(){
+        // return product_name+","+unit+","+expiry_date+ "," + prod_quantity;
+        Cow c = new Cow ("Cow Milk", "20 litres", "27/12/2025" );
+        
+       //Chicken
+        Chicken ch = new Chicken("");
+    
+       //Lamb
+        Lamb la = new Lamb ();
+    
+       
+ 
     
 }
