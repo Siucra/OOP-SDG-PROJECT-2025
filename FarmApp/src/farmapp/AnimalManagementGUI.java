@@ -134,8 +134,9 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
+        CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals();
         if (animals.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "There are no animals stored");
+            JOptionPane.showMessageDialog(this, noAnimalsMsg);
         }
         for (Animal a : animals) {
 
@@ -144,8 +145,9 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
-         if (animals.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "There are no animals.");
+        CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals(); 
+        if (animals.isEmpty()) {
+            JOptionPane.showMessageDialog(this, noAnimalsMsg);
         } else {
             int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
             boolean isFound = false;
