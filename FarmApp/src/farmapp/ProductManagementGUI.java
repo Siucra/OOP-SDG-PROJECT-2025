@@ -15,16 +15,13 @@ import javax.swing.JOptionPane;
 public class ProductManagementGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ProductManagementGUI.class.getName());
-
+    
+    
     /**
      * Creates new form ProductManagementGUI
      */ 
     private ArrayList<ProductManagement> aList;
-    private String name;
-    private String expiry_date;
-    private int id;
-    private int quantity;
-    private int count;
+    
      // Contstructor
     public ProductManagementGUI() {
         initComponents();
@@ -224,37 +221,41 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         String idTf = updateProductTf.getText();
         
         if(idTf.isEmpty()){
-                JOptionPane.showInputDialog(null, "No products available");
+                JOptionPane.showInputDialog(null, "Enter an Id: ");
                 return;
-            }
+        }
         
            int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
-            boolean Found = false;
+           boolean Found = false;
         
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
-}{
+
             if(p.getProd_id() == idEntered){
                 
            
                 
          // Asked the user to eneter values
-        String newName = JOptionPane.showInputDialog(null, "Enter a Name: ");
+        String newName = JOptionPane.showInputDialog(null, "Enter a Name: " + p.getProd_name());
       
-        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: ");
+        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " + p.getExpiry_date());
         
-        Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: "));
+        Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
         
         // Updated the values of the newName, newExpiry, newQuantity
             p.setProd_name(newName);
             p.setExpiry_date(newExpiry_Date);
             p.setProd_quantity(newQuantity);
            
-            }else{
-                JOptionPane.showMessageDialog(null, "Product Id not found");
-                 return;
-          }
             
+            JOptionPane.showMessageDialog(null, "Product is updated!");
+              Found = true;
+              break;
+          }
+        }  
+        
+        if(!Found){
+            JOptionPane.showMessageDialog(null, "Product id cannot be found");
           /*  if (animals.isEmpty()) {
             JOptionPane.showMessageDialog(this, "There are no animals.");
         } else {
@@ -268,7 +269,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 }
   
         */
-        
+        }
     }//GEN-LAST:event_updateProductBtnActionPerformed
 
     private void alertBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alertBtnActionPerformed
