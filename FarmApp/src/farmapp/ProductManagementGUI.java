@@ -31,13 +31,21 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         
         //Create our Array List
         aList = new ArrayList<ProductManagement>();   //NO need to put Assessment in Angle brackets <>
-        // initialise our variables
-        name = "";
-        expiry_date = "";
-        quantity = 0;
-        id = 0;
-        count = 0;
-    
+        
+        
+        aList.add (new ProductManagement(1, "Milk", "2025-01-10", 50.0));
+        
+        aList.add (new ProductManagement(8, "Eggs", "2025-6-05", 300));
+       
+        aList.add (new ProductManagement(4, "Chicken Meat", "2026-1-05", 35.00));
+        
+        aList.add (new ProductManagement(1, "Beef", "2026-2-05", 50.00));
+        
+        aList.add (new ProductManagement(5, "Lamb Meat", "2026-3-05", 40.00));
+        
+        aList.add (new ProductManagement(6, "Wool", "Not Applicable", 21.00));
+        
+        
     }
 
     /**
@@ -49,6 +57,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         productManagement_label = new javax.swing.JLabel();
         viewProductsBtn = new javax.swing.JButton();
@@ -57,6 +66,9 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         checkExpiryBtn = new javax.swing.JButton();
         BackBtn = new javax.swing.JButton();
         alertBtn = new javax.swing.JButton();
+        updateProductTf = new javax.swing.JTextField();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 153));
@@ -122,6 +134,12 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        updateProductTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateProductTfActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -132,18 +150,25 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(alertBtn)
                 .addGap(26, 26, 26))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(productManagement_label)
-                .addContainerGap(80, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(updateProductBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(productInventoryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(viewProductsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(checkExpiryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(productInventoryBtn)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(viewProductsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                        .addComponent(checkExpiryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(131, 131, 131))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(productManagement_label))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,9 +179,11 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addComponent(viewProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(productInventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -182,17 +209,51 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     String output = "";
     private void viewProductsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsBtnActionPerformed
         // TODO add your handling code here:
+        
         if(aList.isEmpty()){
             JOptionPane.showMessageDialog(null, "No products available");
         }
-        for (ProductManagement p : aList){
+        for(ProductManagement p : aList){
             output += p.printDetails();
         }
         JOptionPane.showMessageDialog(null, "These are all the products");
     }//GEN-LAST:event_viewProductsBtnActionPerformed
-
+    
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed
         // TODO add your handling code here:
+        String idTf = parseInt(updateProductTf.getText());
+        
+        if(idTf.isEmpty()){
+                JOptionPane.showInputDialog(null, "Enter a product Id");
+                return;
+            }
+        
+            
+        
+        for(ProductManagement p : aList){
+            if(p.getProd_id() == idTf){
+                
+           
+                
+         // Asked the user to eneter values
+        String newName = JOptionPane.showInputDialog(null, "Enter a Name: ");
+      
+        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: ");
+        
+        Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: "));
+        
+        // Updated the values of the newName, newExpiry, newQuantity
+            p.setProd_name(newName);
+            p.setExpiry_date(newExpiry_Date);
+            p.setProd_quantity(newQuantity);
+           
+            }else{
+                JOptionPane.showMessageDialog(null, "Product Id not found");
+                 return;
+          }
+  
+        
+        
     }//GEN-LAST:event_updateProductBtnActionPerformed
 
     private void alertBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alertBtnActionPerformed
@@ -213,6 +274,10 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         mainGUI.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackBtnActionPerformed
+
+    private void updateProductTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateProductTfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,9 +309,11 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     private javax.swing.JButton alertBtn;
     private javax.swing.JButton checkExpiryBtn;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton productInventoryBtn;
     private javax.swing.JLabel productManagement_label;
     private javax.swing.JButton updateProductBtn;
+    private javax.swing.JTextField updateProductTf;
     private javax.swing.JButton viewProductsBtn;
     // End of variables declaration//GEN-END:variables
 }
