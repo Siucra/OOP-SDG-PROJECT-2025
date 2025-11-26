@@ -19,10 +19,26 @@ public class ProductManagementApp {
         // TODO code application logic here
         ProductManagementGUI myGUI = new ProductManagementGUI();
         myGUI.setVisible(true);
-    
-       
-    
-       /*
+        
+        ProductManagement milk = new ProductManagement(1, "Milk", "2025-01-10", 50.0);
+        System.out.println(milk.printDetails());
+        
+        ProductManagement eggs = new ProductManagement(8, "Eggs", "2025-6-05", 300);
+        System.out.println(eggs.printDetails());
+        
+        ProductManagement chickenMeat = new ProductManagement(4, "Chicken Meat", "2026-1-05", 35.00);
+        System.out.println(chickenMeat.printDetails());
+        
+        ProductManagement beef = new ProductManagement(1, "Beef", "2026-2-05", 50.00);
+        System.out.println(beef.printDetails());
+        
+        ProductManagement lambMeat = new ProductManagement(5, "Lamb Meat", "2026-3-05", 40.00);
+        System.out.println(lambMeat.printDetails());
+        
+        ProductManagement wool = new ProductManagement(6, "Wool", "Not Applicable", 21.00);
+        System.out.println(wool.printDetails());
+        
+        /*
         //Cow
        // public String printDetails(){
         // return product_name+","+unit+","+expiry_date+ "," + prod_quantity;
