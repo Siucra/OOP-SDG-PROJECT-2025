@@ -8,14 +8,14 @@ package farmapp;
  *
  * @author safia
  */
-public class ProductManagement {
+public class Product {
     
     private int prod_id;
     private String prod_name;
     private String expiry_date;
     private double prod_quantity;
     
-    public ProductManagement(int prod_id, String prod_name, String expiry_date,double prod_quantity){
+    public Product(int prod_id, String prod_name, String expiry_date,double prod_quantity){
         this.prod_name = prod_name;
         this.prod_id = prod_id;
         this.expiry_date = expiry_date;
