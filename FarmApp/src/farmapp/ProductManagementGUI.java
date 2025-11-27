@@ -30,15 +30,15 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         aList = new ArrayList<ProductManagement>();   //NO need to put Assessment in Angle brackets <>
         
         
-        aList.add (new ProductManagement(1, "Milk", "2025-01-10", 50.0));
+        aList.add (new ProductManagement(1, "Milk", "01-10-2025", 50.0));
         
-        aList.add (new ProductManagement(8, "Eggs", "2025-6-05", 300));
+        aList.add (new ProductManagement(8, "Eggs", "6-05-2025", 300));
        
-        aList.add (new ProductManagement(4, "Chicken Meat", "2026-1-05", 35.00));
+        aList.add (new ProductManagement(4, "Chicken Meat", "1-05-2026", 35.00));
         
-        aList.add (new ProductManagement(1, "Beef", "2026-2-05", 50.00));
+        aList.add (new ProductManagement(1, "Beef", "2-05-2027", 50.00));
         
-        aList.add (new ProductManagement(5, "Lamb Meat", "2026-3-05", 40.00));
+        aList.add (new ProductManagement(5, "Lamb Meat", "3-05-2026", 40.00));
         
         aList.add (new ProductManagement(6, "Wool", "Not Applicable", 21.00));
         
@@ -64,6 +64,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         BackBtn = new javax.swing.JButton();
         alertBtn = new javax.swing.JButton();
         updateProductTf = new javax.swing.JTextField();
+        checkExpiryTf = new javax.swing.JTextField();
 
         jTextField1.setText("jTextField1");
 
@@ -137,6 +138,12 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             }
         });
 
+        checkExpiryTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkExpiryTfActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -151,9 +158,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(productInventoryBtn)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(viewProductsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                        .addComponent(checkExpiryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(viewProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(131, 131, 131))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,9 +167,15 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                         .addComponent(productManagement_label))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(checkExpiryTf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -180,9 +191,11 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkExpiryTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(alertBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -276,8 +289,53 @@ public class ProductManagementGUI extends javax.swing.JFrame {
 
     private void checkExpiryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkExpiryBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_checkExpiryBtnActionPerformed
+        String productEntered = checkExpiryTf.getText();
+        String result = "";
+        String date_today = "27-11-2025";
+       
+        
+        
+        // String expiry = "";
+        
+        boolean found = false;
+        
+        if (productEntered.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please enter name of a Product");
+            return;
+        }
+        
+        //For loop, iterates through the list of products
+        for (int i = 0; i < aList.size(); i++) {
+        ProductManagement p = aList.get(i);
+        
+        String expiry = p.getExpiry_date();
+        
+        if (expiry.equalsIgnoreCase("Not Applicable")){
+            result += p.getProd_name() + ": This product has no expiry date";
+           
+        }
+        else if(date_today.equals(expiry)){
+            result += p.getProd_name() + ": Expires on " + expiry + "\n";
+            found = true;
+         }else{
+            result += p.getProd_name() + ": Valid for use unitil: " + expiry + "\n";
+        }
+       }
+        
+        if(!found){
+            JOptionPane.showMessageDialog(null, "Sorry not found");
+        //This displays the output
+        }else{
+        JOptionPane.showMessageDialog(null,result);
+        
+        
+        // boolean checkExpiryDate(String expiry) {
+    // return expiry.matches("(?:0[1-9]|1[0-2])/[0-9]{2}");
 
+        
+        }
+    }//GEN-LAST:event_checkExpiryBtnActionPerformed
+    
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
         
         MainMenuGUI mainGUI = new MainMenuGUI();
@@ -288,6 +346,10 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     private void updateProductTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductTfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_updateProductTfActionPerformed
+
+    private void checkExpiryTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkExpiryTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkExpiryTfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -318,6 +380,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     private javax.swing.JButton BackBtn;
     private javax.swing.JButton alertBtn;
     private javax.swing.JButton checkExpiryBtn;
+    private javax.swing.JTextField checkExpiryTf;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton productInventoryBtn;
