@@ -26,17 +26,17 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     public ProductManagementGUI() {
         initComponents();
         
-        //Create our Array List
-        aList = new ArrayList<ProductManagement>();   //NO need to put Assessment in Angle brackets <>
+        //Created  Array List
+        aList = new ArrayList<ProductManagement>();
         
-        
+        // Added products to the list
         aList.add (new ProductManagement(1, "Milk", "01-10-2025", 50.0));
         
         aList.add (new ProductManagement(8, "Eggs", "6-05-2025", 300));
        
         aList.add (new ProductManagement(4, "Chicken Meat", "1-05-2026", 35.00));
         
-        aList.add (new ProductManagement(1, "Beef", "2-05-2027", 50.00));
+        aList.add (new ProductManagement(2, "Beef", "2-05-2027", 50.00));
         
         aList.add (new ProductManagement(5, "Lamb Meat", "3-05-2026", 40.00));
         
@@ -215,36 +215,33 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    String output = "";
+    //////String output = "";
     private void viewProductsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsBtnActionPerformed
         // TODO add your handling code here:
-        /*
-        if(aList.isEmpty()){
-            JOptionPane.showMessageDialog(null, "No products available");
-        }
-        //For loop, iterates through the list of products
-        for (int i = 0; i < aList.size(); i++) {
-            ProductManagement p = aList.get(i);
-            output += p.printDetails() + "\n"; ;
-        }
-        JOptionPane.showMessageDialog(null, output);
-        */
+        
+        //This will check if the list is empty
+        //Will then show a message "No Products"
          if (aList.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "There are no animals.");
+            JOptionPane.showMessageDialog(this, "No Products");
         } else {
-            int productSearch = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
-            boolean found = false;
+             //It asks the user to input the id of a product they want to view
+            int productSearch = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter id of a product you want to view: "));
+            boolean found = false; //Will see if a product is found  
             
             //For loop, iterates through the list of products
             for (int i = 0; i < aList.size(); i++) {
+                //checks if the current product id matches the id inputted by the user
                 if (aList.get(i).getProd_id() == productSearch) {
+                    // This will show the product's details
                     JOptionPane.showMessageDialog(this, aList.get(i).printDetails());
-                    found = true;
-                    break;
+                    found = true; //Product has been found
+                    break; // This stops searching once the product has been found
                 }
             }
+            // This means that if none of the products matches id that the user inputted, show this message
+            
             if (!found) {
-                JOptionPane.showMessageDialog(this, "Product is not found");
+                JOptionPane.showMessageDialog(this, "Product id doesn't exist");
             }
         }
     }//GEN-LAST:event_viewProductsBtnActionPerformed
@@ -261,7 +258,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         }
              int idEntered = Integer.parseInt(idTf);
           // int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
-           boolean Found = false; //check if the product is found, if found it will return true
+           boolean found = false; //check if the product is found, if found it will return true
         
         //For loop, iterates through the list of products
         for (int i = 0; i < aList.size(); i++) {
@@ -272,26 +269,26 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 
            
                 
-         // This asks the user to enter a name, expiry date, qunatity
-        // String newName = JOptionPane.showInputDialog(null, "Enter a Name: ", p.getProd_name());
+         // This asks the user to enter a expiry date, qunatity
       
         String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " , p.getExpiry_date());
         
         Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
         
-        // Updated the values of the newName, newExpiry, newQuantity to the product
-            // p.setProd_name(newName);
+        // Updated the values of the newExpiry, newQuantity to the product
+           
             p.setExpiry_date(newExpiry_Date);
             p.setProd_quantity(newQuantity);
            
             
             JOptionPane.showMessageDialog(null, "Product is updated!");
-              Found = true;
-              break;
-          }
-        }  
+              found = true;//Says that Product has been found and has been updated
+                    break; // This breaks the loop
+                }
+            }
         
-        if(!Found){
+            // This means that if none of the products matches id that the user inputted, show this message
+            if(!found){
             JOptionPane.showMessageDialog(null, "Product id cannot be found");
        
         }
@@ -302,14 +299,19 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         String result = "";
         boolean found = false;
         
+        //Loops through all products in the list
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
-            
-        if (p.getProd_quantity()> 20){
-            found = true;
+         
+        // This checks if quantity is greater 40
+        if (p.getProd_quantity()> 40){
+            found = true; //
+            //Added the details of the products in results
             result += "Ready to collect!, "+ "Quantity of " + p.getProd_name()+ "is: " + p.getProd_quantity()+ "\n";
         }    
         }
+        
+        //If product was not found show message
         if (!found){
             JOptionPane.showMessageDialog(null,"Products are not ready to be collected");
         }else{
@@ -319,29 +321,26 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     
     private void productInventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productInventoryBtnActionPerformed
         // TODO add your handling code here:
-        if(aList.isEmpty()){
-            JOptionPane.showMessageDialog(null, "No products available");
-        }
+        String output = "";  // Resets every the button is clicked so that it's not duplicated 
+        
         //For loop, iterates through the list of products
         for (int i = 0; i < aList.size(); i++) {
-            ProductManagement p = aList.get(i);
-            output += p.printDetails() + "\n"; ;
+            ProductManagement p = aList.get(i);  //THis will get each product
+            output += p.printDetails() + "\n"; ; //And add it to ouput
         }
         JOptionPane.showMessageDialog(null, output);
     }//GEN-LAST:event_productInventoryBtnActionPerformed
 
     private void checkExpiryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkExpiryBtnActionPerformed
         // TODO add your handling code here:
-        String productEntered = checkExpiryTf.getText();
+        String productEntered = checkExpiryTf.getText(); //Stores the product name inputted by the user
         String result = "";
         String date_today = "27-11-2025";
        
         
-        
-        // String expiry = "";
-        
         boolean found = false;
         
+        //If the text field is left empty show this message
         if (productEntered.isEmpty()){
             JOptionPane.showMessageDialog(null, "Please enter name of a Product");
             return;
@@ -351,33 +350,33 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
          
+        //Checks if the product name that user inputted matches the product name
         if(p.getProd_name().equalsIgnoreCase(productEntered)){
             found = true;
             String expiry = p.getExpiry_date();
         
+        //If product has no expiry date then show result message
         if (expiry.equalsIgnoreCase("Not Applicable")){
             result += p.getProd_name() + ": This product has no expiry date";
            
         }
+        //If product expiry date is the same as today date then show message
         else if(date_today.equals(expiry)){
             result += p.getProd_name() + ": Expires on " + expiry + "\n";
-            
+         
+          // Otherwise show expiry date of product
          }else{
-            result += p.getProd_name() + ": Valid for use unitil: " + expiry + "\n";
+            result += p.getProd_name() + ": "+ "Valid for use unitil: " + expiry + "\n";
         }
         break;
        }
         } 
+        //if there was no product found then then show this message 
         if(!found){
             JOptionPane.showMessageDialog(null, "Sorry not found, Please Enter a product name");
         //This displays the output
         }else{
         JOptionPane.showMessageDialog(null,result);
-        
-        
-        // boolean checkExpiryDate(String expiry) {
-    // return expiry.matches("(?:0[1-9]|1[0-2])/[0-9]{2}");
-
         
         }
     }//GEN-LAST:event_checkExpiryBtnActionPerformed
