@@ -57,6 +57,6 @@ public class ProductManagement{
     
     
     public String printDetails(){
-        return prod_id+","+prod_name+","+expiry_date+ "," + prod_quantity;
+        return "Id: "+ prod_id +", "+ "Product Name: "+prod_name+", " + "Expiry Date: "+expiry_date+ ", "+ "Qunatity: " + prod_quantity;
     }
 }

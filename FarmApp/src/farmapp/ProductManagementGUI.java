@@ -218,7 +218,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     String output = "";
     private void viewProductsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsBtnActionPerformed
         // TODO add your handling code here:
-        
+        /*
         if(aList.isEmpty()){
             JOptionPane.showMessageDialog(null, "No products available");
         }
@@ -228,6 +228,25 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             output += p.printDetails() + "\n"; ;
         }
         JOptionPane.showMessageDialog(null, output);
+        */
+         if (aList.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "There are no animals.");
+        } else {
+            int productSearch = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
+            boolean found = false;
+            
+            //For loop, iterates through the list of products
+            for (int i = 0; i < aList.size(); i++) {
+                if (aList.get(i).getProd_id() == productSearch) {
+                    JOptionPane.showMessageDialog(this, aList.get(i).printDetails());
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                JOptionPane.showMessageDialog(this, "Product is not found");
+            }
+        }
     }//GEN-LAST:event_viewProductsBtnActionPerformed
     
     private void updateProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductBtnActionPerformed
@@ -300,6 +319,15 @@ public class ProductManagementGUI extends javax.swing.JFrame {
     
     private void productInventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productInventoryBtnActionPerformed
         // TODO add your handling code here:
+        if(aList.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No products available");
+        }
+        //For loop, iterates through the list of products
+        for (int i = 0; i < aList.size(); i++) {
+            ProductManagement p = aList.get(i);
+            output += p.printDetails() + "\n"; ;
+        }
+        JOptionPane.showMessageDialog(null, output);
     }//GEN-LAST:event_productInventoryBtnActionPerformed
 
     private void checkExpiryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkExpiryBtnActionPerformed
