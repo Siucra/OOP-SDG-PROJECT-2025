@@ -79,18 +79,15 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="checkExpiryBtn" min="-2" pref="155" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="checkExpiryTf" min="-2" pref="71" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="updateProductBtn" min="-2" pref="155" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="updateProductTf" min="-2" pref="100" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="checkExpiryBtn" min="-2" pref="155" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="checkExpiryTf" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="updateProductBtn" min="-2" pref="185" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="updateProductTf" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="80" max="32767" attributes="0"/>
@@ -172,7 +169,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Update Product"/>
+            <Property name="text" type="java.lang.String" value="Update Product By Id"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateProductBtnActionPerformed"/>

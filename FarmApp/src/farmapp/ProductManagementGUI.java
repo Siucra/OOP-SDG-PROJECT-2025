@@ -98,7 +98,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
 
         updateProductBtn.setBackground(new java.awt.Color(254, 220, 159));
         updateProductBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        updateProductBtn.setText("Update Product");
+        updateProductBtn.setText("Update Product By Id");
         updateProductBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateProductBtnActionPerformed(evt);
@@ -167,15 +167,14 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                         .addComponent(productManagement_label))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(checkExpiryTf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(checkExpiryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(checkExpiryTf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(updateProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(updateProductTf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -241,8 +240,8 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter an Id: ");
                 return;
         }
-        
-           int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
+             int idEntered = Integer.parseInt(idTf);
+          // int idEntered = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
            boolean Found = false; //check if the product is found, if found it will return true
         
         //For loop, iterates through the list of products
@@ -307,8 +306,10 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         //For loop, iterates through the list of products
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
-        
-        String expiry = p.getExpiry_date();
+         
+        if(p.getProd_name().equalsIgnoreCase(productEntered)){
+            found = true;
+            String expiry = p.getExpiry_date();
         
         if (expiry.equalsIgnoreCase("Not Applicable")){
             result += p.getProd_name() + ": This product has no expiry date";
@@ -316,12 +317,13 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         }
         else if(date_today.equals(expiry)){
             result += p.getProd_name() + ": Expires on " + expiry + "\n";
-            found = true;
+            
          }else{
             result += p.getProd_name() + ": Valid for use unitil: " + expiry + "\n";
         }
+        break;
        }
-        
+        } 
         if(!found){
             JOptionPane.showMessageDialog(null, "Sorry not found");
         //This displays the output
