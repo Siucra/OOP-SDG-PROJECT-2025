@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package farmapp;
-
+/*
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -19,7 +19,7 @@ public class ProductManagementApp {
         // TODO code application logic here
         ProductManagementGUI myGUI = new ProductManagementGUI();
         myGUI.setVisible(true);
-        
+       /* 
         ProductManagement milk = new ProductManagement(1, "Milk", "2025-01-10", 50.0);
         System.out.println(milk.printDetails());
         
