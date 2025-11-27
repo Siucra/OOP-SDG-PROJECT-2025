@@ -280,8 +280,24 @@ public class ProductManagementGUI extends javax.swing.JFrame {
 
     private void alertBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alertBtnActionPerformed
         // TODO add your handling code here:
+        String result = "";
+        boolean found = false;
+        
+        for (int i = 0; i < aList.size(); i++) {
+        ProductManagement p = aList.get(i);
+            
+        if (p.getProd_quantity()> 20){
+            found = true;
+            result += "Ready to collect!, "+ "Quantity of " + p.getProd_name()+ "is: " + p.getProd_quantity()+ "\n";
+        }    
+        }
+        if (!found){
+            JOptionPane.showMessageDialog(null,"Products are not ready to be collected");
+        }else{
+            JOptionPane.showMessageDialog(null, result);
+        }
     }//GEN-LAST:event_alertBtnActionPerformed
-
+    
     private void productInventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productInventoryBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_productInventoryBtnActionPerformed
@@ -325,7 +341,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
        }
         } 
         if(!found){
-            JOptionPane.showMessageDialog(null, "Sorry not found");
+            JOptionPane.showMessageDialog(null, "Sorry not found, Please Enter a product name");
         //This displays the output
         }else{
         JOptionPane.showMessageDialog(null,result);
