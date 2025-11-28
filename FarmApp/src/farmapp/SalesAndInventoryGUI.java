@@ -87,7 +87,7 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         LogCombo.setBackground(new java.awt.Color(254, 220, 159));
         LogCombo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "log", "buyer", "sale", "inventory" }));
         LogCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogComboActionPerformed(evt);
@@ -163,7 +163,7 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_BackBtnActionPerformed
 
     private void LogComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogComboActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_LogComboActionPerformed
 
     private void SalesBtnPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_SalesBtnPropertyChange
