@@ -173,7 +173,8 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
 
     private void addAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBtnActionPerformed
         
-    //Animal a = new Animal();
+    AddNewAnimal win = new AddNewAnimal();
+    
         
     }//GEN-LAST:event_addAnimalBtnActionPerformed
 
