@@ -40,6 +40,20 @@ public class AddNewAnimal extends javax.swing.JFrame {
         cowRB = new javax.swing.JRadioButton();
         chickenRB = new javax.swing.JRadioButton();
         lambRB = new javax.swing.JRadioButton();
+        idLbl = new javax.swing.JLabel();
+        genderLbl = new javax.swing.JLabel();
+        ageLbl = new javax.swing.JLabel();
+        isAliveLbl = new javax.swing.JLabel();
+        weightLbl = new javax.swing.JLabel();
+        IsHealthyLbl = new javax.swing.JLabel();
+        isMilkingLbl = new javax.swing.JLabel();
+        litProdLbl = new javax.swing.JLabel();
+        isPregnantLbl = new javax.swing.JLabel();
+        eggQtyLbl = new javax.swing.JLabel();
+        eggQualityLbl = new javax.swing.JLabel();
+        isLayingEggsLbl = new javax.swing.JLabel();
+        woolLengthLbl = new javax.swing.JLabel();
+        isLeanedLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,58 +87,144 @@ public class AddNewAnimal extends javax.swing.JFrame {
         addAnimalBtnGroup.add(lambRB);
         lambRB.setText("Lamb");
 
+        idLbl.setText("ID");
+
+        genderLbl.setText("Gender");
+
+        ageLbl.setText("Age");
+
+        isAliveLbl.setText("Alive");
+
+        weightLbl.setText("Weight");
+
+        IsHealthyLbl.setText("Healthy");
+
+        isMilkingLbl.setText("isMilking");
+
+        litProdLbl.setText("Litres Produced");
+
+        isPregnantLbl.setText("Pregnant");
+
+        eggQtyLbl.setText("Egg Quantity");
+
+        eggQualityLbl.setText("Egg Quality");
+
+        isLayingEggsLbl.setText("Laying Eggs");
+
+        woolLengthLbl.setText("Wool Length");
+
+        isLeanedLbl.setText("Leaned");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cowImage)
-                            .addComponent(chickenImage)
-                            .addComponent(lambImage))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(6, 6, 6)
-                                    .addComponent(cowRB))
-                                .addComponent(chickenRB))
-                            .addComponent(lambRB, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 38, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(litProdLbl)
+                                .addGap(156, 156, 156))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(isMilkingLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(isPregnantLbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(idLbl)
+                                        .addComponent(genderLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(weightLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(IsHealthyLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(ageLbl)
+                                        .addComponent(isAliveLbl)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(eggQtyLbl)
+                                    .addComponent(eggQualityLbl)
+                                    .addComponent(isLayingEggsLbl)
+                                    .addComponent(woolLengthLbl)
+                                    .addComponent(isLeanedLbl))
+                                .addGap(53, 53, 53)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cowImage)
+                    .addComponent(chickenImage)
+                    .addComponent(lambImage))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chickenRB)
+                    .addComponent(lambRB)
+                    .addComponent(cowRB))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(title)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cowRB)
-                        .addGap(61, 61, 61)
-                        .addComponent(chickenRB)
-                        .addGap(59, 59, 59)
-                        .addComponent(lambRB)
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cowImage)
-                        .addGap(34, 34, 34)
-                        .addComponent(chickenImage)
-                        .addGap(32, 32, 32)
-                        .addComponent(lambImage)
-                        .addGap(25, 25, 25))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(idLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(genderLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ageLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(isAliveLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(weightLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(IsHealthyLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(isMilkingLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(litProdLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(isPregnantLbl))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(cowImage)
+                                                .addGap(34, 34, 34)
+                                                .addComponent(chickenImage))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(eggQtyLbl)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(eggQualityLbl)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(isLayingEggsLbl)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(woolLengthLbl)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(isLeanedLbl)))
+                                        .addGap(32, 32, 32)
+                                        .addComponent(lambImage))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(cowRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(chickenRB)
+                                .addGap(59, 59, 59)
+                                .addComponent(lambRB)
+                                .addGap(19, 19, 19)))
+                        .addGap(0, 49, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
@@ -166,14 +266,28 @@ public class AddNewAnimal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel IsHealthyLbl;
     private javax.swing.ButtonGroup addAnimalBtnGroup;
+    private javax.swing.JLabel ageLbl;
     private javax.swing.JButton backAmBtn;
     private javax.swing.JLabel chickenImage;
     private javax.swing.JRadioButton chickenRB;
     private javax.swing.JLabel cowImage;
     private javax.swing.JRadioButton cowRB;
+    private javax.swing.JLabel eggQtyLbl;
+    private javax.swing.JLabel eggQualityLbl;
+    private javax.swing.JLabel genderLbl;
+    private javax.swing.JLabel idLbl;
+    private javax.swing.JLabel isAliveLbl;
+    private javax.swing.JLabel isLayingEggsLbl;
+    private javax.swing.JLabel isLeanedLbl;
+    private javax.swing.JLabel isMilkingLbl;
+    private javax.swing.JLabel isPregnantLbl;
     private javax.swing.JLabel lambImage;
     private javax.swing.JRadioButton lambRB;
+    private javax.swing.JLabel litProdLbl;
     private javax.swing.JLabel title;
+    private javax.swing.JLabel weightLbl;
+    private javax.swing.JLabel woolLengthLbl;
     // End of variables declaration//GEN-END:variables
 }
