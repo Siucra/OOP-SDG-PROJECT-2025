@@ -165,22 +165,23 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
        
     }//GEN-LAST:event_searchAnimalBtnActionPerformed
 
-    private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
-        MainMenuGUI mainGUI = new MainMenuGUI();
-        mainGUI.setVisible(true);
-	this.dispose();
-    }//GEN-LAST:event_backAmBtnActionPerformed
-
     private void addAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBtnActionPerformed
         
-    AddNewAnimal win = new AddNewAnimal();
-    
+    //AddNewAnimal win = new AddNewAnimal();
+     win.setVisible(true);  
+     this.dispose();
         
     }//GEN-LAST:event_addAnimalBtnActionPerformed
 
     private void removeAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAnimalBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_removeAnimalBtnActionPerformed
+
+    private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
+        MainMenuGUI mainGUI = new MainMenuGUI();
+        mainGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backAmBtnActionPerformed
 
     /**
      * @param args the command line arguments
