@@ -31,14 +31,15 @@ public class AddNewAnimal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        addAnimalBtnGroup = new javax.swing.ButtonGroup();
         cowImage = new javax.swing.JLabel();
         chickenImage = new javax.swing.JLabel();
         lambImage = new javax.swing.JLabel();
-        addCowBtn = new javax.swing.JButton();
-        addChickenBtn = new javax.swing.JButton();
-        addLambBtn = new javax.swing.JButton();
         backAmBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        cowRB = new javax.swing.JRadioButton();
+        chickenRB = new javax.swing.JRadioButton();
+        lambRB = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,23 +49,6 @@ public class AddNewAnimal extends javax.swing.JFrame {
 
         lambImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/lamb.png"))); // NOI18N
 
-        addCowBtn.setBackground(new java.awt.Color(254, 220, 159));
-        addCowBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        addCowBtn.setText("Cow");
-        addCowBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addCowBtnActionPerformed(evt);
-            }
-        });
-
-        addChickenBtn.setBackground(new java.awt.Color(254, 220, 159));
-        addChickenBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        addChickenBtn.setText("Chicken");
-
-        addLambBtn.setBackground(new java.awt.Color(254, 220, 159));
-        addLambBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        addLambBtn.setText("Lamb");
-
         backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/backButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,8 +56,22 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 3, 12)); // NOI18N
-        jLabel1.setText("Choose an Animal you'd wish to add to the farm");
+        title.setFont(new java.awt.Font("Monospaced", 3, 12)); // NOI18N
+        title.setText("Choose an Animal you'd wish to add to the farm");
+
+        addAnimalBtnGroup.add(cowRB);
+        cowRB.setText("Cow");
+
+        addAnimalBtnGroup.add(chickenRB);
+        chickenRB.setText("Chicken");
+        chickenRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chickenRBActionPerformed(evt);
+            }
+        });
+
+        addAnimalBtnGroup.add(lambRB);
+        lambRB.setText("Lamb");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,45 +82,49 @@ public class AddNewAnimal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cowImage)
                             .addComponent(chickenImage)
                             .addComponent(lambImage))
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(addCowBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addChickenBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addLambBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(cowRB))
+                                .addComponent(chickenRB))
+                            .addComponent(lambRB, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 38, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(title)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(addCowBtn)
-                        .addGap(58, 58, 58)
-                        .addComponent(addChickenBtn)
-                        .addGap(56, 56, 56)
-                        .addComponent(addLambBtn)
-                        .addGap(45, 45, 45))
-                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cowRB)
+                        .addGap(61, 61, 61)
+                        .addComponent(chickenRB)
+                        .addGap(59, 59, 59)
+                        .addComponent(lambRB)
+                        .addGap(44, 44, 44))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(cowImage)
                         .addGap(34, 34, 34)
                         .addComponent(chickenImage)
                         .addGap(32, 32, 32)
                         .addComponent(lambImage)
-                        .addContainerGap())))
+                        .addGap(25, 25, 25))))
         );
 
         pack();
@@ -134,9 +136,9 @@ public class AddNewAnimal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backAmBtnActionPerformed
 
-    private void addCowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCowBtnActionPerformed
+    private void chickenRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chickenRBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addCowBtnActionPerformed
+    }//GEN-LAST:event_chickenRBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,13 +166,14 @@ public class AddNewAnimal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addChickenBtn;
-    private javax.swing.JButton addCowBtn;
-    private javax.swing.JButton addLambBtn;
+    private javax.swing.ButtonGroup addAnimalBtnGroup;
     private javax.swing.JButton backAmBtn;
     private javax.swing.JLabel chickenImage;
+    private javax.swing.JRadioButton chickenRB;
     private javax.swing.JLabel cowImage;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton cowRB;
     private javax.swing.JLabel lambImage;
+    private javax.swing.JRadioButton lambRB;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
