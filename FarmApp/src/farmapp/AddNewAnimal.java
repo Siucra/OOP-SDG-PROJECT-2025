@@ -81,7 +81,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
         woolLenTF = new javax.swing.JTextField();
         leanedYesRB = new javax.swing.JRadioButton();
         leanedNoRB = new javax.swing.JRadioButton();
-        addAnimalBTN = new javax.swing.JButton();
+        addAnimalBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +91,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
 
         lambImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/lamb.png"))); // NOI18N
 
+        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/BackButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backAmBtnActionPerformed(evt);
@@ -290,10 +291,13 @@ public class AddNewAnimal extends javax.swing.JFrame {
         leanedBG.add(leanedNoRB);
         leanedNoRB.setText("No");
 
-        addAnimalBTN.setText("add");
-        addAnimalBTN.addActionListener(new java.awt.event.ActionListener() {
+        addAnimalBtn.setBackground(new java.awt.Color(254, 220, 159));
+        addAnimalBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        addAnimalBtn.setForeground(new java.awt.Color(0, 0, 0));
+        addAnimalBtn.setText("Add");
+        addAnimalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addAnimalBTNActionPerformed(evt);
+                addAnimalBtnActionPerformed(evt);
             }
         });
 
@@ -349,12 +353,11 @@ public class AddNewAnimal extends javax.swing.JFrame {
                                                                 .addComponent(femaleRB))
                                                             .addComponent(idTF, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
                                                             .addComponent(ageTF)
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                .addComponent(weightTF, javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                                    .addComponent(aliveYesRB)
-                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                    .addComponent(aliveNoRB))))
+                                                            .addComponent(weightTF)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(aliveYesRB)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(aliveNoRB)))
                                                         .addGap(18, 18, 18)
                                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                             .addGroup(layout.createSequentialGroup()
@@ -381,29 +384,28 @@ public class AddNewAnimal extends javax.swing.JFrame {
                                                                 .addComponent(eggQtyLbl)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(addAnimalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(cowImage)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(cowRB)
-                                                .addGap(21, 21, 21))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(chickenImage)
-                                                    .addComponent(lambImage))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(chickenRB)
-                                                    .addComponent(lambRB)))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(addAnimalBTN)
-                                                .addGap(14, 14, 14))))))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(cowImage)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(cowRB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(chickenImage)
+                                                            .addComponent(lambImage))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                            .addComponent(chickenRB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(lambRB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                                .addGap(0, 6, Short.MAX_VALUE))))))
                             .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(title)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -507,8 +509,8 @@ public class AddNewAnimal extends javax.swing.JFrame {
                         .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(addAnimalBTN)
-                        .addGap(22, 22, 22))))
+                        .addComponent(addAnimalBtn)
+                        .addGap(23, 23, 23))))
         );
 
         pack();
@@ -637,7 +639,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
     isMilkingLbl.setEnabled(false);
     }//GEN-LAST:event_lambRBActionPerformed
 
-    private void addAnimalBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBTNActionPerformed
+    private void addAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBtnActionPerformed
         if (cowRB.isSelected()) {
             int id = Integer.parseInt(idTF.getText());
             double age = Double.parseDouble(ageTF.getText());
@@ -704,7 +706,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"A new lamb has been added to this farm!");
             
         }
-    }//GEN-LAST:event_addAnimalBTNActionPerformed
+    }//GEN-LAST:event_addAnimalBtnActionPerformed
 
     private void milkYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_milkYesRBActionPerformed
         // TODO add your handling code here:
@@ -737,7 +739,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IsHealthyLbl;
-    private javax.swing.JButton addAnimalBTN;
+    private javax.swing.JButton addAnimalBtn;
     private javax.swing.ButtonGroup addAnimalBtnGroup;
     private javax.swing.JLabel ageLbl;
     private javax.swing.JTextField ageTF;

@@ -82,6 +82,7 @@ public AnimalManagementGUI() {
             }
         });
 
+        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/BackButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backAmBtnActionPerformed(evt);
