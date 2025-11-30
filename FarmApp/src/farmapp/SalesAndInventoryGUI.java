@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author CelinaMoali
  */
 public class SalesAndInventoryGUI extends javax.swing.JFrame {
+    //creating an array list for sales and inventory
     ArrayList<String> sales = new ArrayList<>();
     ArrayList<String> inventory = new ArrayList<>();
     
@@ -148,50 +149,65 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesBtnActionPerformed
+        //if sales is empty, show message that no sales are logged
         if(sales.isEmpty()){
             JOptionPane.showMessageDialog(this, "No sales logged");
         }
+        //if not empty, show the stored sales from the array list, connecting the strings from the array into one string
         else{
             JOptionPane.showMessageDialog(this, "sales logs:\n" + String.join("\n", sales));
         }
     }//GEN-LAST:event_SalesBtnActionPerformed
 
     private void InventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryBtnActionPerformed
+        //if the inventory array list is empty, show said message
         if(inventory.isEmpty()){
             JOptionPane.showMessageDialog(this, "No inventory logged");
         }
+        //else, show the stored inv from the array list, connecting the strings from the array into one string
         else{
             JOptionPane.showMessageDialog(this, "inventory logs:\n" + String.join("\n", inventory));
         }   
     }//GEN-LAST:event_InventoryBtnActionPerformed
 
     private void ReportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportBtnActionPerformed
+        //creating and declaring report, then showing the joptionpane.inputdialog
         String report = JOptionPane.showInputDialog(this, "Enter your report");
+        //if the report is not null AND not empty, display the message: your report: with user input
         if(report != null && !report.isEmpty()){
             JOptionPane.showMessageDialog(this, "your report:\n" + report);
         }
     }//GEN-LAST:event_ReportBtnActionPerformed
 
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        //back button to main menu
         MainMenuGUI mainGUI = new MainMenuGUI();
         mainGUI.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackBtnActionPerformed
 
     private void LogComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogComboActionPerformed
+        //declaring and creating the comboBox selection choice to string
         String choice = LogCombo.getSelectedItem().toString();
-        
+        //if the choice is equals to log sales
         if(choice.equals("log sales")){
+            //declaring and creating sale, showing the input dialog for entering sales
             String sale = JOptionPane.showInputDialog(this,"Enter Sale Details:");
+            //if the input is not null and not empty, then show message dialog that the sale is logged
             if(sale != null && !sale.isEmpty()){
                 JOptionPane.showMessageDialog(this, "Sale logged");
+                //add the input to the array list
                 sales.add(sale);
          }
         }
+        //else if the choice is equals to log inventory
         else if(choice.equals("log inventory")){
+            //declaring and creating item, showing the input dialog for entering inventory
             String item = JOptionPane.showInputDialog(this, "Enter Inventory Item:");
+            //if the input is not null and not empty, then show message dialog that the inventory is logged
             if(item != null && !item.isEmpty()){
                 JOptionPane.showMessageDialog(this, "Inventory Logged");
+                // add input to the array list
                 inventory.add(item);
             }
         }   
