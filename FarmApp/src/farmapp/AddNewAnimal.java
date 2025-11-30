@@ -32,7 +32,13 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private void initComponents() {
 
         addAnimalBtnGroup = new javax.swing.ButtonGroup();
-        jTextField1 = new javax.swing.JTextField();
+        genderBG = new javax.swing.ButtonGroup();
+        aliveBG = new javax.swing.ButtonGroup();
+        healthyBG = new javax.swing.ButtonGroup();
+        milkingBG = new javax.swing.ButtonGroup();
+        pregnantGB = new javax.swing.ButtonGroup();
+        layEggsGB = new javax.swing.ButtonGroup();
+        leanedBG = new javax.swing.ButtonGroup();
         cowImage = new javax.swing.JLabel();
         chickenImage = new javax.swing.JLabel();
         lambImage = new javax.swing.JLabel();
@@ -55,12 +61,12 @@ public class AddNewAnimal extends javax.swing.JFrame {
         isLayingEggsLbl = new javax.swing.JLabel();
         woolLengthLbl = new javax.swing.JLabel();
         isLeanedLbl = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        aliveYesRB = new javax.swing.JRadioButton();
+        aliveNoRB = new javax.swing.JRadioButton();
+        healthyNoRB = new javax.swing.JRadioButton();
+        healthyYesRB = new javax.swing.JRadioButton();
+        pregNoRB = new javax.swing.JRadioButton();
+        pregYesRB = new javax.swing.JRadioButton();
         idTF = new javax.swing.JTextField();
         maleRB = new javax.swing.JRadioButton();
         femaleRB = new javax.swing.JRadioButton();
@@ -69,8 +75,13 @@ public class AddNewAnimal extends javax.swing.JFrame {
         milkYesRB = new javax.swing.JRadioButton();
         milkNoRB = new javax.swing.JRadioButton();
         litresTF = new javax.swing.JTextField();
-
-        jTextField1.setText("jTextField1");
+        eggQtyTF = new javax.swing.JTextField();
+        eggQualTF = new javax.swing.JTextField();
+        layEggsYes = new javax.swing.JRadioButton();
+        layEggsNo = new javax.swing.JRadioButton();
+        woolLenTF = new javax.swing.JTextField();
+        leanedYesRB = new javax.swing.JRadioButton();
+        leanedNoRB = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,7 +91,6 @@ public class AddNewAnimal extends javax.swing.JFrame {
 
         lambImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/lamb.png"))); // NOI18N
 
-        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/backButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backAmBtnActionPerformed(evt);
@@ -132,25 +142,32 @@ public class AddNewAnimal extends javax.swing.JFrame {
 
         isLeanedLbl.setText("Leaned");
 
-        jRadioButton1.setText("Yes");
+        aliveBG.add(aliveYesRB);
+        aliveYesRB.setText("Yes");
 
-        jRadioButton2.setText("No");
+        aliveBG.add(aliveNoRB);
+        aliveNoRB.setText("No");
 
-        jRadioButton3.setText("No");
+        healthyBG.add(healthyNoRB);
+        healthyNoRB.setText("No");
 
-        jRadioButton4.setText("Yes");
+        healthyBG.add(healthyYesRB);
+        healthyYesRB.setText("Yes");
 
-        jRadioButton5.setText("No");
+        pregnantGB.add(pregNoRB);
+        pregNoRB.setText("No");
 
-        jRadioButton6.setText("Yes");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        pregnantGB.add(pregYesRB);
+        pregYesRB.setText("Yes");
+        pregYesRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                pregYesRBActionPerformed(evt);
             }
         });
 
         idTF.setText("jTextField1");
 
+        genderBG.add(maleRB);
         maleRB.setText("M");
         maleRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,17 +175,58 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
+        genderBG.add(femaleRB);
         femaleRB.setText("F");
 
         ageTF.setText("jTextField2");
 
         weightTF.setText("jTextField2");
 
+        milkingBG.add(milkYesRB);
         milkYesRB.setText("Yes");
 
+        milkingBG.add(milkNoRB);
         milkNoRB.setText("No");
 
         litresTF.setText("jTextField2");
+
+        eggQtyTF.setText("jTextField2");
+
+        eggQualTF.setText("jTextField2");
+        eggQualTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eggQualTFActionPerformed(evt);
+            }
+        });
+
+        layEggsGB.add(layEggsYes);
+        layEggsYes.setText("Yes");
+        layEggsYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                layEggsYesActionPerformed(evt);
+            }
+        });
+
+        layEggsGB.add(layEggsNo);
+        layEggsNo.setText("No");
+
+        woolLenTF.setText("jTextField2");
+        woolLenTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                woolLenTFActionPerformed(evt);
+            }
+        });
+
+        leanedBG.add(leanedYesRB);
+        leanedYesRB.setText("Yes");
+        leanedYesRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leanedYesRBActionPerformed(evt);
+            }
+        });
+
+        leanedBG.add(leanedNoRB);
+        leanedNoRB.setText("No");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,79 +235,94 @@ public class AddNewAnimal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(isMilkingLbl, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(isPregnantLbl, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(54, 54, 54))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(47, 47, 47)
-                                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(milkYesRB)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(milkNoRB)))
-                                .addGap(134, 134, 134))
+                                        .addComponent(milkNoRB))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(pregYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(pregNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(litProdLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(litresTF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(isAliveLbl)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(aliveYesRB)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(aliveNoRB))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(weightLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(IsHealthyLbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(healthyYesRB)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(healthyNoRB))
+                                                .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(ageLbl)
+                                            .addGap(29, 29, 29)
+                                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                    .addComponent(isAliveLbl)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jRadioButton1)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jRadioButton2))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(weightLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(IsHealthyLbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(jRadioButton4)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(jRadioButton3))
-                                                        .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                    .addComponent(ageLbl)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(genderLbl)
+                                            .addComponent(idLbl))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(genderLbl)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(maleRB)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(femaleRB))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(idLbl)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(isLayingEggsLbl)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(eggQtyLbl)
+                                        .addComponent(layEggsYes, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(layEggsNo, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(woolLengthLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(isLeanedLbl)
+                                        .addGap(37, 37, 37)
+                                        .addComponent(leanedYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(leanedNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                             .addComponent(eggQualityLbl)
-                                            .addComponent(isLayingEggsLbl)
-                                            .addComponent(woolLengthLbl)
-                                            .addComponent(isLeanedLbl))))
-                                .addGap(63, 63, 63)))
+                                            .addGap(18, 18, 18)
+                                            .addComponent(eggQualTF))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(eggQtyLbl)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(litProdLbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(litresTF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cowImage)
                             .addComponent(chickenImage)
@@ -259,9 +332,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
                             .addComponent(chickenRB)
                             .addComponent(lambRB)
                             .addComponent(cowRB)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -270,46 +341,34 @@ public class AddNewAnimal extends javax.swing.JFrame {
                 .addComponent(title)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(idLbl)
-                                    .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(genderLbl)
-                                    .addComponent(maleRB)
-                                    .addComponent(femaleRB))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(ageLbl)
-                                    .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(isAliveLbl)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jRadioButton2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(weightLbl)
-                                    .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(eggQtyLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eggQualityLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(isLayingEggsLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(woolLengthLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(isLeanedLbl)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idLbl)
+                            .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(genderLbl)
+                            .addComponent(maleRB)
+                            .addComponent(femaleRB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ageLbl)
+                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(isAliveLbl)
+                            .addComponent(aliveYesRB)
+                            .addComponent(aliveNoRB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(weightLbl)
+                            .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(IsHealthyLbl)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jRadioButton4)
-                                .addComponent(jRadioButton3)))
+                                .addComponent(healthyYesRB)
+                                .addComponent(healthyNoRB)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(isMilkingLbl)
@@ -322,29 +381,51 @@ public class AddNewAnimal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(isPregnantLbl)
-                            .addComponent(jRadioButton6)
-                            .addComponent(jRadioButton5))
-                        .addGap(20, 20, 20)
-                        .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(cowImage)
-                                .addGap(34, 34, 34)
-                                .addComponent(chickenImage)
-                                .addGap(32, 32, 32)
-                                .addComponent(lambImage))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(cowRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(chickenRB)
-                                .addGap(59, 59, 59)
-                                .addComponent(lambRB)
-                                .addGap(19, 19, 19)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(pregYesRB)
+                            .addComponent(pregNoRB)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(cowImage)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(chickenImage))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(eggQtyLbl)
+                                        .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(eggQualityLbl)
+                                        .addComponent(eggQualTF, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(isLayingEggsLbl)
+                                        .addComponent(layEggsYes)
+                                        .addComponent(layEggsNo))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(woolLengthLbl)
+                                        .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(isLeanedLbl)
+                                        .addComponent(leanedYesRB)
+                                        .addComponent(leanedNoRB))))
+                            .addGap(32, 32, 32)
+                            .addComponent(lambImage))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addComponent(cowRB)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(chickenRB)
+                            .addGap(59, 59, 59)
+                            .addComponent(lambRB)
+                            .addGap(19, 19, 19))))
+                .addGap(18, 18, 18)
+                .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -360,13 +441,29 @@ public class AddNewAnimal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_chickenRBActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void pregYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pregYesRBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_pregYesRBActionPerformed
 
     private void maleRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_maleRBActionPerformed
+
+    private void eggQualTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eggQualTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eggQualTFActionPerformed
+
+    private void layEggsYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_layEggsYesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_layEggsYesActionPerformed
+
+    private void woolLenTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_woolLenTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_woolLenTFActionPerformed
+
+    private void leanedYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leanedYesRBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leanedYesRBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -398,15 +495,24 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup addAnimalBtnGroup;
     private javax.swing.JLabel ageLbl;
     private javax.swing.JTextField ageTF;
+    private javax.swing.ButtonGroup aliveBG;
+    private javax.swing.JRadioButton aliveNoRB;
+    private javax.swing.JRadioButton aliveYesRB;
     private javax.swing.JButton backAmBtn;
     private javax.swing.JLabel chickenImage;
     private javax.swing.JRadioButton chickenRB;
     private javax.swing.JLabel cowImage;
     private javax.swing.JRadioButton cowRB;
     private javax.swing.JLabel eggQtyLbl;
+    private javax.swing.JTextField eggQtyTF;
+    private javax.swing.JTextField eggQualTF;
     private javax.swing.JLabel eggQualityLbl;
     private javax.swing.JRadioButton femaleRB;
+    private javax.swing.ButtonGroup genderBG;
     private javax.swing.JLabel genderLbl;
+    private javax.swing.ButtonGroup healthyBG;
+    private javax.swing.JRadioButton healthyNoRB;
+    private javax.swing.JRadioButton healthyYesRB;
     private javax.swing.JLabel idLbl;
     private javax.swing.JTextField idTF;
     private javax.swing.JLabel isAliveLbl;
@@ -414,23 +520,27 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel isLeanedLbl;
     private javax.swing.JLabel isMilkingLbl;
     private javax.swing.JLabel isPregnantLbl;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lambImage;
     private javax.swing.JRadioButton lambRB;
+    private javax.swing.ButtonGroup layEggsGB;
+    private javax.swing.JRadioButton layEggsNo;
+    private javax.swing.JRadioButton layEggsYes;
+    private javax.swing.ButtonGroup leanedBG;
+    private javax.swing.JRadioButton leanedNoRB;
+    private javax.swing.JRadioButton leanedYesRB;
     private javax.swing.JLabel litProdLbl;
     private javax.swing.JTextField litresTF;
     private javax.swing.JRadioButton maleRB;
     private javax.swing.JRadioButton milkNoRB;
     private javax.swing.JRadioButton milkYesRB;
+    private javax.swing.ButtonGroup milkingBG;
+    private javax.swing.JRadioButton pregNoRB;
+    private javax.swing.JRadioButton pregYesRB;
+    private javax.swing.ButtonGroup pregnantGB;
     private javax.swing.JLabel title;
     private javax.swing.JLabel weightLbl;
     private javax.swing.JTextField weightTF;
+    private javax.swing.JTextField woolLenTF;
     private javax.swing.JLabel woolLengthLbl;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,6 +20,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
     public AnimalManagementGUI() {
         this.getContentPane().setBackground(new Color(251,187,105));
         initComponents();
+        
     }
 
     /**
@@ -83,7 +84,6 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
             }
         });
 
-        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/backButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backAmBtnActionPerformed(evt);
