@@ -10,17 +10,16 @@ import javax.swing.JOptionPane;
  * @author 05den
  */
 public class AnimalManagementGUI extends javax.swing.JFrame {
-        private ArrayList<Animal> animals = new ArrayList<>();
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AnimalManagementGUI.class.getName());
 
     /**
      * Creates new form AnimalManagementGUI
      */
-    public AnimalManagementGUI() {
-        this.getContentPane().setBackground(new Color(251,187,105));
-        initComponents();
-    }
+public AnimalManagementGUI() {
+    this.getContentPane().setBackground(new Color(251,187,105));
+    initComponents();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -83,7 +82,7 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
             }
         });
 
-        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/backButton.png"))); // NOI18N
+        backAmBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmapp/images/BackButton.png"))); // NOI18N
         backAmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backAmBtnActionPerformed(evt);
@@ -133,25 +132,30 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
 
     private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
         CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals();
-        if (animals.isEmpty()) {
+        
+        if (MainMenuGUI.animals.isEmpty()) {
             JOptionPane.showMessageDialog(this, noAnimalsMsg);
         }
-        for (Animal a : animals) {
-
-            JOptionPane.showMessageDialog(this, a.printDetails());
+        for (Animal a : MainMenuGUI.animals) {
+            
+            JOptionPane.showMessageDialog(this,a.printDetails(),a.getType(),JOptionPane.PLAIN_MESSAGE);
         }
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
         CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals(); 
-        if (animals.isEmpty()) {
+        
+        if (MainMenuGUI.animals.isEmpty()) {
             JOptionPane.showMessageDialog(this, noAnimalsMsg);
-        } else {
+        } 
+        else {
             int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
             boolean isFound = false;
-            for (int i = 0; i < animals.size(); i++) {
-                if (animals.get(i).getId() == search) {
-                    JOptionPane.showMessageDialog(this, animals.get(i).printDetails());
+            for (int i = 0; i < MainMenuGUI.animals.size(); i++) {
+                Animal animal = MainMenuGUI.animals.get(i); //get animal object
+                if (animal.getId() == search) {
+                    //JOptionPane doesnt accept 3 arguements, either 2 or 4 (4th arguement removes icon)
+                    JOptionPane.showMessageDialog(this,animal.printDetails(),animal.getType(),JOptionPane.PLAIN_MESSAGE);
                     isFound = true;
                     break;
                 }
@@ -165,14 +169,42 @@ public class AnimalManagementGUI extends javax.swing.JFrame {
 
     private void addAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAnimalBtnActionPerformed
         
-    AddNewAnimal win = new AddNewAnimal();
-     win.setVisible(true);  
+    new AddNewAnimal().setVisible(true); 
      this.dispose();
         
     }//GEN-LAST:event_addAnimalBtnActionPerformed
 
     private void removeAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAnimalBtnActionPerformed
-        // TODO add your handling code here:
+    CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals();       
+    if (MainMenuGUI.animals.isEmpty()) {
+        JOptionPane.showMessageDialog(this, noAnimalsMsg);
+        return; //break
+    }
+
+    int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter the ID of the animal to delete:"));
+    boolean isFound = false;
+
+    for (int i = 0; i < MainMenuGUI.animals.size(); i++) {
+        Animal animal = MainMenuGUI.animals.get(i);
+        if (animal.getId() == search) {
+            isFound = true;
+            String confirm = JOptionPane.showInputDialog(this,"Are you sure you want to remove this " + animal.getType() + " from the farm?\n(yes/no)");
+
+            if (confirm != null && confirm.toLowerCase().equals("yes")) {
+                MainMenuGUI.animals.remove(i);
+                JOptionPane.showMessageDialog(this, "Animal with ID " + search + " has been successfully removed.");
+            } 
+            else {
+                JOptionPane.showMessageDialog(this, "Animal not removed.");
+            }
+            break; // stop looping after finding the animal
+        }
+    }
+
+    if (!isFound) {
+        JOptionPane.showMessageDialog(this, "Animal not found.");
+    }
+
     }//GEN-LAST:event_removeAnimalBtnActionPerformed
 
     private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
