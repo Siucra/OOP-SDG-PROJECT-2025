@@ -166,7 +166,10 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_InventoryBtnActionPerformed
 
     private void ReportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportBtnActionPerformed
-        
+        String report = JOptionPane.showInputDialog(this, "Enter your report");
+        if(report != null && !report.isEmpty()){
+            JOptionPane.showMessageDialog(this, "your report:\n" + report);
+        }
     }//GEN-LAST:event_ReportBtnActionPerformed
 
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
