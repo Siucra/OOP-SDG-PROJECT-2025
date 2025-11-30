@@ -57,11 +57,12 @@
                                       <Component id="pregNoRB" min="-2" pref="48" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="litProdLbl" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="litresTF" min="-2" pref="55" max="-2" attributes="0"/>
+                                              <Component id="litresTF" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -86,20 +87,22 @@
                                                       <Component id="milkNoRB" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="ageTF" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="aliveYesRB" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="aliveNoRB" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Component id="weightTF" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="maleRB" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Component id="femaleRB" min="-2" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="idTF" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="idTF" pref="92" max="32767" attributes="0"/>
+                                                          <Component id="ageTF" alignment="0" max="32767" attributes="0"/>
+                                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                              <Component id="weightTF" alignment="0" max="32767" attributes="0"/>
+                                                              <Group type="102" alignment="0" attributes="0">
+                                                                  <Component id="aliveYesRB" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="-2" attributes="0"/>
+                                                                  <Component id="aliveNoRB" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -113,7 +116,7 @@
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="woolLengthLbl" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="woolLenTF" min="-2" pref="82" max="-2" attributes="0"/>
+                                                              <Component id="woolLenTF" min="-2" pref="88" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="isLeanedLbl" min="-2" max="-2" attributes="0"/>
@@ -122,17 +125,15 @@
                                                               <EmptySpace min="-2" max="-2" attributes="0"/>
                                                               <Component id="leanedNoRB" min="-2" pref="48" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="eggQualityLbl" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                  <Component id="eggQualTF" max="32767" attributes="0"/>
-                                                              </Group>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="eggQtyLbl" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="eggQtyTF" min="-2" pref="84" max="-2" attributes="0"/>
-                                                              </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="eggQualityLbl" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="eggQualTF" min="-2" pref="81" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="eggQtyLbl" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="eggQtyTF" min="-2" pref="92" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -157,6 +158,10 @@
                                                   <Component id="chickenRB" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="lambRB" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="addAnimalBTN" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -299,9 +304,17 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="backAmBtn" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace pref="7" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="backAmBtn" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="addAnimalBTN" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -581,7 +594,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="i.e ...."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idTFActionPerformed"/>
@@ -620,7 +632,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="i.e ..."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="weightTF">
@@ -631,7 +642,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="i.e ...."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="milkYesRB">
@@ -644,6 +654,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Yes"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="milkYesRBActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="milkNoRB">
       <Properties>
@@ -664,7 +677,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="i.e ...."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="eggQtyTF">
@@ -675,7 +687,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="eggQualTF">
@@ -725,7 +736,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="i.e ...."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="woolLenTFActionPerformed"/>
@@ -755,6 +765,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addAnimalBTN">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="add"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAnimalBTNActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

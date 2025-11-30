@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainMenuGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainMenuGUI.class.getName());
-
+public static ArrayList<Animal> animals = new ArrayList<>();
     /**
      * Creates new form MainMenuGUI
      */

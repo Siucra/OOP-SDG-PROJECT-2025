@@ -35,5 +35,9 @@ public class Lamb extends Animal {//SUBCLASS
         this.woolLength = woolLength;
     }
     
+    @Override
+    public String printDetails(){
+    return "\n Wool Length: "+woolLength+"\n Is leaned: "+isLeaned;
+    }
     
 }
