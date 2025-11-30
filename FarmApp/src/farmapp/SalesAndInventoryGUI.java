@@ -4,6 +4,7 @@
  */
 package farmapp;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -87,7 +88,7 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
 
         LogCombo.setBackground(new java.awt.Color(254, 220, 159));
         LogCombo.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "log", "buyer", "sale", "inventory" }));
+        LogCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "please select:", "log sales", "log inventory" }));
         LogCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogComboActionPerformed(evt);
@@ -118,7 +119,7 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
                             .addComponent(InventoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(SalesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
+                        .addGap(122, 122, 122)
                         .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -131,9 +132,9 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
                 .addComponent(SalesBtn)
                 .addGap(28, 28, 28)
                 .addComponent(InventoryBtn)
-                .addGap(30, 30, 30)
+                .addGap(28, 28, 28)
                 .addComponent(LogCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ReportBtn)
                     .addComponent(BackBtn))
@@ -163,7 +164,22 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_BackBtnActionPerformed
 
     private void LogComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogComboActionPerformed
-
+        String choice = LogCombo.getSelectedItem().toString();
+        
+        if(choice.equals("log sales")){
+            String sale = JOptionPane.showInputDialog(this,"Enter Sale Details:");
+            if(sale != null && !sale.isEmpty()){
+                JOptionPane.showMessageDialog(this, "Sale logged");
+                //save sale to array list later
+         }
+        }
+        else if(choice.equals("log inventory")){
+            String item = JOptionPane.showInputDialog(this, "Enter Inventory Item:");
+            if(item != null && !item.isEmpty()){
+                JOptionPane.showMessageDialog(this, "Inventory Logged");
+                //save inv to array list later
+            }
+        }   
     }//GEN-LAST:event_LogComboActionPerformed
 
     private void SalesBtnPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_SalesBtnPropertyChange
