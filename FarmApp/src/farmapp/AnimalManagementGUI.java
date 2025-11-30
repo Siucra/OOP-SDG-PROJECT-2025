@@ -131,24 +131,30 @@ public AnimalManagementGUI() {
 
     private void viewAnimalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAnimalsBtnActionPerformed
         CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals();
+        
         if (MainMenuGUI.animals.isEmpty()) {
             JOptionPane.showMessageDialog(this, noAnimalsMsg);
         }
         for (Animal a : MainMenuGUI.animals) {
-            JOptionPane.showMessageDialog(this, a.printDetails());
+            
+            JOptionPane.showMessageDialog(this,a.printDetails(),a.getType(),JOptionPane.PLAIN_MESSAGE);
         }
     }//GEN-LAST:event_viewAnimalsBtnActionPerformed
 
     private void searchAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAnimalBtnActionPerformed
         CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals(); 
+        
         if (MainMenuGUI.animals.isEmpty()) {
             JOptionPane.showMessageDialog(this, noAnimalsMsg);
-        } else {
+        } 
+        else {
             int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter ID of animal you wish to search for: "));
             boolean isFound = false;
             for (int i = 0; i < MainMenuGUI.animals.size(); i++) {
-                if (MainMenuGUI.animals.get(i).getId() == search) {
-                    JOptionPane.showMessageDialog(this, MainMenuGUI.animals.get(i).printDetails());
+                Animal animal = MainMenuGUI.animals.get(i); //get animal object
+                if (animal.getId() == search) {
+                    //JOptionPane doesnt accept 3 arguements, either 2 or 4 (4th arguement removes icon)
+                    JOptionPane.showMessageDialog(this,animal.printDetails(),animal.getType(),JOptionPane.PLAIN_MESSAGE);
                     isFound = true;
                     break;
                 }

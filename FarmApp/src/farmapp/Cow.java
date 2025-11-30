@@ -47,7 +47,7 @@ public class Cow extends Animal {//SUBCLASS
     
     @Override
     public String printDetails(){
-    return "\nIs Milking: "+isMilking+"\nLitres Produced: "+litresProduced+"\nIs Pregnant: "+isPregnant;
+    return super.printDetails()+ "\nIs Milking: "+isMilking+"\nLitres Produced: "+litresProduced+"\nIs Pregnant: "+isPregnant;
     }
     
 }

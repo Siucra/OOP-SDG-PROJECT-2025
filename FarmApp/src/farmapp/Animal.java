@@ -76,6 +76,10 @@ public class Animal {//PARENT CLASS
         this.weight = weight;
     }
     
+    public String getType() { 
+    return this.getClass().getSimpleName();
+    }
+    
     public String printDetails(){
         return "ID: "+id +"\nGender: "+gender +"\nAge: "+age +"\nIs Alive: "+isAlive +"\nWeight" +weight +"\nIs Healthy"+isHealthy;
     }

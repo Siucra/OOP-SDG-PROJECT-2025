@@ -47,7 +47,7 @@ public class Chicken extends Animal{
     
     @Override
     public String printDetails(){
-        return "Egg Quantity: "+eggQty+"\nEgg Quality: "+eggQuality+"\nIs laying eggs: "+isLayingEggs;
+        return super.printDetails()+"Egg Quantity: "+eggQty+"\nEgg Quality: "+eggQuality+"\nIs laying eggs: "+isLayingEggs;
         }
     
 }
