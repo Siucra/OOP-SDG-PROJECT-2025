@@ -5,6 +5,7 @@
 package farmapp;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 
 /**
@@ -12,6 +13,8 @@ import javax.swing.JOptionPane;
  * @author CelinaMoali
  */
 public class SalesAndInventoryGUI extends javax.swing.JFrame {
+    ArrayList<String> sales = new ArrayList<>();
+    ArrayList<String> inventory = new ArrayList<>();
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SalesAndInventoryGUI.class.getName());
 
@@ -170,14 +173,14 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
             String sale = JOptionPane.showInputDialog(this,"Enter Sale Details:");
             if(sale != null && !sale.isEmpty()){
                 JOptionPane.showMessageDialog(this, "Sale logged");
-                //save sale to array list later
+                sales.add(sale);
          }
         }
         else if(choice.equals("log inventory")){
             String item = JOptionPane.showInputDialog(this, "Enter Inventory Item:");
             if(item != null && !item.isEmpty()){
                 JOptionPane.showMessageDialog(this, "Inventory Logged");
-                //save inv to array list later
+                inventory.add(item);
             }
         }   
     }//GEN-LAST:event_LogComboActionPerformed
