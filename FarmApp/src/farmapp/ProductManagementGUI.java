@@ -40,9 +40,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         
         aList.add (new ProductManagement(5, "Lamb Meat", "3-05-2026", 40.00));
         
-        aList.add (new ProductManagement(6, "Wool", "Not Applicable", 21.00));
-        
-        
+        aList.add (new ProductManagement(6, "Wool", "Not Applicable", 21.00));    
     }
 
     /**
@@ -239,7 +237,6 @@ public class ProductManagementGUI extends javax.swing.JFrame {
                 }
             }
             // This means that if none of the products matches id that the user inputted, show this message
-            
             if (!found) {
                 JOptionPane.showMessageDialog(this, "Product id doesn't exist");
             }
@@ -266,31 +263,22 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             
             // This checks if the id enetred by the uer matches the product id
             if(p.getProd_id() == idEntered){
-                
-           
-                
-         // This asks the user to enter a expiry date, qunatity
-      
-        String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " , p.getExpiry_date());
+           // This asks the user to enter a expiry date, qunatity
+            String newExpiry_Date = JOptionPane.showInputDialog(null, "Enter an Expiry Date: " , p.getExpiry_date());
+            Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
         
-        Double newQuantity = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter a Quantity: " + p.getProd_quantity()));
-        
-        // Updated the values of the newExpiry, newQuantity to the product
-           
+            // Updated the values of the newExpiry, newQuantity to the product
             p.setExpiry_date(newExpiry_Date);
             p.setProd_quantity(newQuantity);
            
-            
             JOptionPane.showMessageDialog(null, "Product is updated!");
               found = true;//Says that Product has been found and has been updated
                     break; // This breaks the loop
                 }
             }
-        
             // This means that if none of the products matches id that the user inputted, show this message
             if(!found){
             JOptionPane.showMessageDialog(null, "Product id cannot be found");
-       
         }
     }//GEN-LAST:event_updateProductBtnActionPerformed
 
@@ -336,8 +324,7 @@ public class ProductManagementGUI extends javax.swing.JFrame {
         String productEntered = checkExpiryTf.getText(); //Stores the product name inputted by the user
         String result = "";
         String date_today = "27-11-2025";
-       
-        
+ 
         boolean found = false;
         
         //If the text field is left empty show this message
@@ -345,7 +332,6 @@ public class ProductManagementGUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please enter name of a Product");
             return;
         }
-        
         //For loop, iterates through the list of products
         for (int i = 0; i < aList.size(); i++) {
         ProductManagement p = aList.get(i);
