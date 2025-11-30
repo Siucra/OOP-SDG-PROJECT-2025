@@ -81,7 +81,7 @@ public class Animal {//PARENT CLASS
     }
     
     public String printDetails(){
-        return "ID: "+id +"\nGender: "+gender +"\nAge: "+age +"\nIs Alive: "+isAlive +"\nWeight" +weight +"\nIs Healthy"+isHealthy;
+        return "ID: "+id +"\nGender: "+gender +"\nAge: "+age +"\nIs Alive: "+isAlive +"\nWeight: " +weight +"\nIs Healthy: "+isHealthy;
     }
     
 }

@@ -174,7 +174,36 @@ public AnimalManagementGUI() {
     }//GEN-LAST:event_addAnimalBtnActionPerformed
 
     private void removeAnimalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAnimalBtnActionPerformed
-        // TODO add your handling code here:
+    CustomMessageNoAnimals noAnimalsMsg = new CustomMessageNoAnimals();       
+    if (MainMenuGUI.animals.isEmpty()) {
+        JOptionPane.showMessageDialog(this, noAnimalsMsg);
+        return; //break
+    }
+
+    int search = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter the ID of the animal to delete:"));
+    boolean isFound = false;
+
+    for (int i = 0; i < MainMenuGUI.animals.size(); i++) {
+        Animal animal = MainMenuGUI.animals.get(i);
+        if (animal.getId() == search) {
+            isFound = true;
+            String confirm = JOptionPane.showInputDialog(this,"Are you sure you want to remove this " + animal.getType() + " from the farm?\n(yes/no)");
+
+            if (confirm != null && confirm.toLowerCase().equals("yes")) {
+                MainMenuGUI.animals.remove(i);
+                JOptionPane.showMessageDialog(this, "Animal with ID " + search + " has been successfully removed.");
+            } 
+            else {
+                JOptionPane.showMessageDialog(this, "Animal not removed.");
+            }
+            break; // stop looping after finding the animal
+        }
+    }
+
+    if (!isFound) {
+        JOptionPane.showMessageDialog(this, "Animal not found.");
+    }
+
     }//GEN-LAST:event_removeAnimalBtnActionPerformed
 
     private void backAmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAmBtnActionPerformed
