@@ -36,8 +36,8 @@ public class AddNewAnimal extends javax.swing.JFrame {
         aliveBG = new javax.swing.ButtonGroup();
         healthyBG = new javax.swing.ButtonGroup();
         milkingBG = new javax.swing.ButtonGroup();
-        pregnantGB = new javax.swing.ButtonGroup();
-        layEggsGB = new javax.swing.ButtonGroup();
+        pregnantBG = new javax.swing.ButtonGroup();
+        layEggsBG = new javax.swing.ButtonGroup();
         leanedBG = new javax.swing.ButtonGroup();
         cowImage = new javax.swing.JLabel();
         chickenImage = new javax.swing.JLabel();
@@ -77,8 +77,8 @@ public class AddNewAnimal extends javax.swing.JFrame {
         litresTF = new javax.swing.JTextField();
         eggQtyTF = new javax.swing.JTextField();
         eggQualTF = new javax.swing.JTextField();
-        layEggsYes = new javax.swing.JRadioButton();
-        layEggsNo = new javax.swing.JRadioButton();
+        layEggsYesRB = new javax.swing.JRadioButton();
+        layEggsNoRB = new javax.swing.JRadioButton();
         woolLenTF = new javax.swing.JTextField();
         leanedYesRB = new javax.swing.JRadioButton();
         leanedNoRB = new javax.swing.JRadioButton();
@@ -97,13 +97,22 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
-        title.setFont(new java.awt.Font("Monospaced", 3, 12)); // NOI18N
+        title.setFont(new java.awt.Font("Monospaced", 3, 14)); // NOI18N
         title.setText("Choose an Animal you'd wish to add to the farm");
 
+        cowRB.setBackground(new java.awt.Color(254, 220, 159));
         addAnimalBtnGroup.add(cowRB);
+        cowRB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cowRB.setText("Cow");
+        cowRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cowRBActionPerformed(evt);
+            }
+        });
 
+        chickenRB.setBackground(new java.awt.Color(254, 220, 159));
         addAnimalBtnGroup.add(chickenRB);
+        chickenRB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         chickenRB.setText("Chicken");
         chickenRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,53 +120,80 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
+        lambRB.setBackground(new java.awt.Color(254, 220, 159));
         addAnimalBtnGroup.add(lambRB);
+        lambRB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lambRB.setText("Lamb");
+        lambRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lambRBActionPerformed(evt);
+            }
+        });
 
+        idLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         idLbl.setText("ID");
 
+        genderLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         genderLbl.setText("Gender");
 
+        ageLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ageLbl.setText("Age");
 
+        isAliveLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         isAliveLbl.setText("Alive");
 
+        weightLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         weightLbl.setText("Weight");
 
+        IsHealthyLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         IsHealthyLbl.setText("Healthy");
 
+        isMilkingLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         isMilkingLbl.setText("isMilking");
 
+        litProdLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         litProdLbl.setText("Litres Produced");
 
+        isPregnantLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         isPregnantLbl.setText("Pregnant");
 
+        eggQtyLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eggQtyLbl.setText("Egg Quantity");
 
+        eggQualityLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eggQualityLbl.setText("Egg Quality");
 
+        isLayingEggsLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         isLayingEggsLbl.setText("Laying Eggs");
 
+        woolLengthLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         woolLengthLbl.setText("Wool Length");
 
+        isLeanedLbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         isLeanedLbl.setText("Leaned");
 
+        aliveYesRB.setBackground(new java.awt.Color(254, 220, 159));
         aliveBG.add(aliveYesRB);
         aliveYesRB.setText("Yes");
 
+        aliveNoRB.setBackground(new java.awt.Color(254, 220, 159));
         aliveBG.add(aliveNoRB);
         aliveNoRB.setText("No");
 
+        healthyNoRB.setBackground(new java.awt.Color(254, 220, 159));
         healthyBG.add(healthyNoRB);
         healthyNoRB.setText("No");
 
+        healthyYesRB.setBackground(new java.awt.Color(254, 220, 159));
         healthyBG.add(healthyYesRB);
         healthyYesRB.setText("Yes");
 
-        pregnantGB.add(pregNoRB);
+        pregNoRB.setBackground(new java.awt.Color(254, 220, 159));
+        pregnantBG.add(pregNoRB);
         pregNoRB.setText("No");
 
-        pregnantGB.add(pregYesRB);
+        pregYesRB.setBackground(new java.awt.Color(254, 220, 159));
+        pregnantBG.add(pregYesRB);
         pregYesRB.setText("Yes");
         pregYesRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,8 +201,16 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
-        idTF.setText("jTextField1");
+        idTF.setBackground(new java.awt.Color(255, 255, 255));
+        idTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        idTF.setText("i.e ....");
+        idTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idTFActionPerformed(evt);
+            }
+        });
 
+        maleRB.setBackground(new java.awt.Color(254, 220, 159));
         genderBG.add(maleRB);
         maleRB.setText("M");
         maleRB.addActionListener(new java.awt.event.ActionListener() {
@@ -175,48 +219,66 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
+        femaleRB.setBackground(new java.awt.Color(254, 220, 159));
         genderBG.add(femaleRB);
         femaleRB.setText("F");
 
-        ageTF.setText("jTextField2");
+        ageTF.setBackground(new java.awt.Color(255, 255, 255));
+        ageTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        ageTF.setText("i.e ...");
 
-        weightTF.setText("jTextField2");
+        weightTF.setBackground(new java.awt.Color(255, 255, 255));
+        weightTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        weightTF.setText("i.e ....");
 
+        milkYesRB.setBackground(new java.awt.Color(254, 220, 159));
         milkingBG.add(milkYesRB);
         milkYesRB.setText("Yes");
 
+        milkNoRB.setBackground(new java.awt.Color(254, 220, 159));
         milkingBG.add(milkNoRB);
         milkNoRB.setText("No");
 
-        litresTF.setText("jTextField2");
+        litresTF.setBackground(new java.awt.Color(255, 255, 255));
+        litresTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        litresTF.setText("i.e ....");
 
+        eggQtyTF.setBackground(new java.awt.Color(255, 255, 255));
+        eggQtyTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         eggQtyTF.setText("jTextField2");
 
-        eggQualTF.setText("jTextField2");
+        eggQualTF.setBackground(new java.awt.Color(255, 255, 255));
+        eggQualTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        eggQualTF.setText("(1-5)");
         eggQualTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eggQualTFActionPerformed(evt);
             }
         });
 
-        layEggsGB.add(layEggsYes);
-        layEggsYes.setText("Yes");
-        layEggsYes.addActionListener(new java.awt.event.ActionListener() {
+        layEggsYesRB.setBackground(new java.awt.Color(254, 220, 159));
+        layEggsBG.add(layEggsYesRB);
+        layEggsYesRB.setText("Yes");
+        layEggsYesRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                layEggsYesActionPerformed(evt);
+                layEggsYesRBActionPerformed(evt);
             }
         });
 
-        layEggsGB.add(layEggsNo);
-        layEggsNo.setText("No");
+        layEggsNoRB.setBackground(new java.awt.Color(254, 220, 159));
+        layEggsBG.add(layEggsNoRB);
+        layEggsNoRB.setText("No");
 
-        woolLenTF.setText("jTextField2");
+        woolLenTF.setBackground(new java.awt.Color(255, 255, 255));
+        woolLenTF.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        woolLenTF.setText("i.e ....");
         woolLenTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 woolLenTFActionPerformed(evt);
             }
         });
 
+        leanedYesRB.setBackground(new java.awt.Color(254, 220, 159));
         leanedBG.add(leanedYesRB);
         leanedYesRB.setText("Yes");
         leanedYesRB.addActionListener(new java.awt.event.ActionListener() {
@@ -225,6 +287,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
             }
         });
 
+        leanedNoRB.setBackground(new java.awt.Color(254, 220, 159));
         leanedBG.add(leanedNoRB);
         leanedNoRB.setText("No");
 
@@ -233,115 +296,157 @@ public class AddNewAnimal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(isMilkingLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(isPregnantLbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(milkYesRB)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(milkNoRB))
-                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(isPregnantLbl)
+                                        .addGap(18, 18, 18)
                                         .addComponent(pregYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(pregNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(isAliveLbl)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(aliveYesRB)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(aliveNoRB))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(weightLbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(IsHealthyLbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(healthyYesRB)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(healthyNoRB))
-                                                .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(ageLbl)
-                                            .addGap(29, 29, 29)
-                                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(pregNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(genderLbl)
-                                            .addComponent(idLbl))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(maleRB)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(femaleRB))
-                                            .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(isLayingEggsLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(layEggsYes, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(litProdLbl)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(litresTF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(idLbl)
+                                                    .addComponent(genderLbl)
+                                                    .addComponent(ageLbl)
+                                                    .addComponent(isAliveLbl)
+                                                    .addComponent(weightLbl)
+                                                    .addComponent(IsHealthyLbl)
+                                                    .addComponent(isMilkingLbl))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(healthyYesRB)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(healthyNoRB))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(milkYesRB)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(milkNoRB))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(aliveYesRB)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(aliveNoRB))
+                                                            .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(maleRB)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(femaleRB))
+                                                            .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(18, 18, 18)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(isLayingEggsLbl)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(layEggsYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(layEggsNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(woolLengthLbl)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(isLeanedLbl)
+                                                                .addGap(37, 37, 37)
+                                                                .addComponent(leanedYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(leanedNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                                    .addComponent(eggQualityLbl)
+                                                                    .addGap(18, 18, 18)
+                                                                    .addComponent(eggQualTF))
+                                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                                    .addComponent(eggQtyLbl)
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                    .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(layEggsNo, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(woolLengthLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(isLeanedLbl)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(leanedYesRB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(leanedNoRB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(eggQualityLbl)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(eggQualTF))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(eggQtyLbl)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(litProdLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(litresTF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cowImage)
-                            .addComponent(chickenImage)
-                            .addComponent(lambImage))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chickenRB)
-                            .addComponent(lambRB)
-                            .addComponent(cowRB)))
-                    .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(cowImage)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(cowRB)
+                                                .addGap(21, 21, 21))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(chickenImage)
+                                                    .addComponent(lambImage))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(chickenRB)
+                                                    .addComponent(lambRB)))))))
+                            .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(title)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(title)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(title)
                         .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(eggQtyLbl)
+                                    .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(eggQualityLbl)
+                                    .addComponent(eggQualTF, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(isLayingEggsLbl)
+                                    .addComponent(layEggsYesRB)
+                                    .addComponent(layEggsNoRB))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(woolLengthLbl)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(isLeanedLbl)
+                                    .addComponent(leanedYesRB)
+                                    .addComponent(leanedNoRB)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cowImage)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(cowRB)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(chickenImage)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(lambImage))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(chickenRB)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(lambRB)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(idLbl)
                             .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -350,82 +455,45 @@ public class AddNewAnimal extends javax.swing.JFrame {
                             .addComponent(genderLbl)
                             .addComponent(maleRB)
                             .addComponent(femaleRB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ageLbl)
-                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ageLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(isAliveLbl)
                             .addComponent(aliveYesRB)
                             .addComponent(aliveNoRB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(weightLbl)
-                            .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(weightTF, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weightLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(IsHealthyLbl)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(healthyYesRB)
-                                .addComponent(healthyNoRB)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(isMilkingLbl)
-                            .addComponent(milkYesRB)
-                            .addComponent(milkNoRB))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(IsHealthyLbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(isMilkingLbl))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(healthyYesRB)
+                                    .addComponent(healthyNoRB))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(milkYesRB)
+                                    .addComponent(milkNoRB))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(litProdLbl)
-                            .addComponent(litresTF, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(litresTF))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(isPregnantLbl)
                             .addComponent(pregYesRB)
-                            .addComponent(pregNoRB)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(cowImage)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(chickenImage))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(eggQtyLbl)
-                                        .addComponent(eggQtyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(eggQualityLbl)
-                                        .addComponent(eggQualTF, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(isLayingEggsLbl)
-                                        .addComponent(layEggsYes)
-                                        .addComponent(layEggsNo))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(woolLengthLbl)
-                                        .addComponent(woolLenTF, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(isLeanedLbl)
-                                        .addComponent(leanedYesRB)
-                                        .addComponent(leanedNoRB))))
-                            .addGap(32, 32, 32)
-                            .addComponent(lambImage))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(27, 27, 27)
-                            .addComponent(cowRB)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(chickenRB)
-                            .addGap(59, 59, 59)
-                            .addComponent(lambRB)
-                            .addGap(19, 19, 19))))
-                .addGap(18, 18, 18)
+                            .addComponent(pregNoRB))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(backAmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
@@ -438,7 +506,32 @@ public class AddNewAnimal extends javax.swing.JFrame {
     }//GEN-LAST:event_backAmBtnActionPerformed
 
     private void chickenRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chickenRBActionPerformed
-        // TODO add your handling code here:
+    // enable CHICKEN components
+    eggQtyLbl.setEnabled(true);
+    eggQtyTF.setEnabled(true);
+    eggQualityLbl.setEnabled(true);
+    eggQualTF.setEnabled(true);
+    isLayingEggsLbl.setEnabled(true);
+    layEggsYesRB.setEnabled(true);
+    layEggsNoRB.setEnabled(true);
+
+    // disable LAMB components
+    woolLengthLbl.setEnabled(false);
+    woolLenTF.setEnabled(false);
+    isLeanedLbl.setEnabled(false);
+    leanedYesRB.setEnabled(false);
+    leanedNoRB.setEnabled(false);
+
+    // disable COW components
+    milkYesRB.setEnabled(false);
+    milkNoRB.setEnabled(false);
+    isMilkingLbl.setEnabled(false);
+    litProdLbl.setEnabled(false);
+    litresTF.setEnabled(false);
+    isPregnantLbl.setEnabled(false);
+    pregYesRB.setEnabled(false);
+    pregNoRB.setEnabled(false);
+    isMilkingLbl.setEnabled(false);
     }//GEN-LAST:event_chickenRBActionPerformed
 
     private void pregYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pregYesRBActionPerformed
@@ -453,9 +546,9 @@ public class AddNewAnimal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_eggQualTFActionPerformed
 
-    private void layEggsYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_layEggsYesActionPerformed
+    private void layEggsYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_layEggsYesRBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_layEggsYesActionPerformed
+    }//GEN-LAST:event_layEggsYesRBActionPerformed
 
     private void woolLenTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_woolLenTFActionPerformed
         // TODO add your handling code here:
@@ -464,6 +557,70 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private void leanedYesRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leanedYesRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_leanedYesRBActionPerformed
+
+    private void idTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idTFActionPerformed
+
+    private void cowRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cowRBActionPerformed
+        
+    // disable CHICKEN components
+    eggQtyLbl.setEnabled(false);
+    eggQtyTF.setEnabled(false);
+    eggQualityLbl.setEnabled(false);
+    eggQualTF.setEnabled(false);
+    isLayingEggsLbl.setEnabled(false);
+    layEggsYesRB.setEnabled(false);
+    layEggsNoRB.setEnabled(false);
+
+    // disable LAMB components
+    woolLengthLbl.setEnabled(false);
+    woolLenTF.setEnabled(false);
+    isLeanedLbl.setEnabled(false);
+    leanedYesRB.setEnabled(false);
+    leanedNoRB.setEnabled(false);
+
+    // enable COW components
+    milkYesRB.setEnabled(true);
+    milkNoRB.setEnabled(true);
+    isMilkingLbl.setEnabled(true);
+    litProdLbl.setEnabled(true);
+    litresTF.setEnabled(true);
+    pregYesRB.setEnabled(true);
+    pregNoRB.setEnabled(true);
+    isPregnantLbl.setEnabled(true);
+    isMilkingLbl.setEnabled(true);
+
+    }//GEN-LAST:event_cowRBActionPerformed
+
+    private void lambRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lambRBActionPerformed
+        // disable CHICKEN components
+    eggQtyLbl.setEnabled(false);
+    eggQtyTF.setEnabled(false);
+    eggQualityLbl.setEnabled(false);
+    eggQualTF.setEnabled(false);
+    isLayingEggsLbl.setEnabled(false);
+    layEggsYesRB.setEnabled(false);
+    layEggsNoRB.setEnabled(false);
+
+    // enable LAMB components
+    woolLengthLbl.setEnabled(true);
+    woolLenTF.setEnabled(true);
+    isLeanedLbl.setEnabled(true);
+    leanedYesRB.setEnabled(true);
+    leanedNoRB.setEnabled(true);
+
+    // disable COW components
+    milkYesRB.setEnabled(false);
+    milkNoRB.setEnabled(false);
+    isMilkingLbl.setEnabled(false);
+    litProdLbl.setEnabled(false);
+    litresTF.setEnabled(false);
+    pregYesRB.setEnabled(false);
+    pregNoRB.setEnabled(false);
+    isPregnantLbl.setEnabled(false);
+    isMilkingLbl.setEnabled(false);
+    }//GEN-LAST:event_lambRBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -522,9 +679,9 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel isPregnantLbl;
     private javax.swing.JLabel lambImage;
     private javax.swing.JRadioButton lambRB;
-    private javax.swing.ButtonGroup layEggsGB;
-    private javax.swing.JRadioButton layEggsNo;
-    private javax.swing.JRadioButton layEggsYes;
+    private javax.swing.ButtonGroup layEggsBG;
+    private javax.swing.JRadioButton layEggsNoRB;
+    private javax.swing.JRadioButton layEggsYesRB;
     private javax.swing.ButtonGroup leanedBG;
     private javax.swing.JRadioButton leanedNoRB;
     private javax.swing.JRadioButton leanedYesRB;
@@ -536,7 +693,7 @@ public class AddNewAnimal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup milkingBG;
     private javax.swing.JRadioButton pregNoRB;
     private javax.swing.JRadioButton pregYesRB;
-    private javax.swing.ButtonGroup pregnantGB;
+    private javax.swing.ButtonGroup pregnantBG;
     private javax.swing.JLabel title;
     private javax.swing.JLabel weightLbl;
     private javax.swing.JTextField weightTF;
