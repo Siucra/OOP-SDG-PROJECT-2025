@@ -148,12 +148,21 @@ public class SalesAndInventoryGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalesBtnActionPerformed
-        //redirects to a different interface
-
+        if(sales.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No sales logged");
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "sales logs:\n" + String.join("\n", sales));
+        }
     }//GEN-LAST:event_SalesBtnActionPerformed
 
     private void InventoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryBtnActionPerformed
-
+        if(inventory.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No inventory logged");
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "inventory logs:\n" + String.join("\n", inventory));
+        }   
     }//GEN-LAST:event_InventoryBtnActionPerformed
 
     private void ReportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportBtnActionPerformed
