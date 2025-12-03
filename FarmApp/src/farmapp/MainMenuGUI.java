@@ -101,15 +101,23 @@ public static ArrayList<Animal> animals = new ArrayList<>();
     }// </editor-fold>//GEN-END:initComponents
 
     private void AnimalMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalMBtnActionPerformed
-
+        AnimalManagementGUI aniManGUI = new AnimalManagementGUI();
+        aniManGUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_AnimalMBtnActionPerformed
 
     private void salesInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesInvBtnActionPerformed
- 
+        SalesAndInventoryGUI salesGUI = new SalesAndInventoryGUI();
+        salesGUI.setVisible(true);
+        this.dispose();
+               
     }//GEN-LAST:event_salesInvBtnActionPerformed
 
     private void productTBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productTBtnActionPerformed
- 
+        ProductManagementGUI prodManGUI = new ProductManagementGUI();
+        prodManGUI.setVisible(true);
+        this.dispose();
+              
     }//GEN-LAST:event_productTBtnActionPerformed
 
 
