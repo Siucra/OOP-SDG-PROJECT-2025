@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package farmapp;
 
 /**
  *FarmApp.java
- * @author
+ * @author Denise Balasmeh, Celina Moali, Safiat dao
+ *  x24701351, x23160306, x23477232  
  */
+
 public class FarmApp {
 
     public static void main(String[] args) {
