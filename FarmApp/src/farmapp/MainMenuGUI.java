@@ -37,7 +37,6 @@ public static ArrayList<Animal> animals = new ArrayList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Monospaced", 0, 10)); // NOI18N
-        setBackground(new java.awt.Color(251, 187, 105));
 
         mainMenutitle.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         mainMenutitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -54,7 +53,7 @@ public static ArrayList<Animal> animals = new ArrayList<>();
 
         productTBtn.setBackground(new java.awt.Color(254, 220, 159));
         productTBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        productTBtn.setText("Product Tracking");
+        productTBtn.setText("Product Management");
         productTBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productTBtnActionPerformed(evt);
